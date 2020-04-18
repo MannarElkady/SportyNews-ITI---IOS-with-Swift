@@ -27,6 +27,9 @@ class SportViewController: UICollectionViewController ,SportsViewProtocol{
         sportsList = Array<SportEntity>()
         sportPersenter = SportsPersenter(sportsview: self)
         sportPersenter?.getSports()
+     
+    
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -36,6 +39,7 @@ class SportViewController: UICollectionViewController ,SportsViewProtocol{
 
         // Do any additional setup after loading the view.
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -94,7 +98,24 @@ class SportViewController: UICollectionViewController ,SportsViewProtocol{
     
         return cell
     }
-
+    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+        let headerview = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath as IndexPath)as! SportsCollectionReusableView
+            headerview.header.text="Sports"
+                if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.sectionHeadersPinToVisibleBounds = true
+            layout.headerReferenceSize = CGSize(width: 10, height: 100)
+        }
+        return headerview
+    }
+   
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let height = view.frame.size.height
+        let width = view.frame.size.width
+        return CGSize(width: width * 0.5, height: height * 0.2)
+    }
+    
+    
     // MARK: UICollectionViewDelegate
 
     /*
@@ -104,12 +125,13 @@ class SportViewController: UICollectionViewController ,SportsViewProtocol{
     }
     */
 
-    /*
-    // Uncomment this method to specify if the specified item should be selected
+    
+     //Uncomment this method to specify if the specified item should be selected
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        print("\(sportsList![indexPath.row].sportName)")
         return true
     }
-    */
+ 
 
     /*
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
