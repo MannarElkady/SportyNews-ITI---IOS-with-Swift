@@ -28,7 +28,7 @@ class ViewController: UIViewController {
                 return j["strSport"].stringValue == "Soccer"
                 }))
             }
-        )*/
+        )
         
         //get teams by league name
         
