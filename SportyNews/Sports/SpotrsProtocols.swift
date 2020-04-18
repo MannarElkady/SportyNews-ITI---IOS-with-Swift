@@ -7,3 +7,11 @@
 //
 
 import Foundation
+
+protocol SportPresenterProtocol {
+    func getSports()
+    
+}
+protocol SportsViewProtocol {
+    func showSports(sports:Array<SportEntity>)
+}

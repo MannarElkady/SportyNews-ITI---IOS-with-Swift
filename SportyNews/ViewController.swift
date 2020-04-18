@@ -24,6 +24,7 @@ class ViewController: UIViewController {
                 print("SportName: \(sport.sportName)")
                 })
         })
+        
         /*get leagues per sport**/
         NetworkService.INSTANCE.getResponse(withURL: APIURLs.searchLeagueURL, ProcessResult: {
             json in

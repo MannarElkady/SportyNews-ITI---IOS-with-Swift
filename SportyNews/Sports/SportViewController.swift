@@ -7,19 +7,32 @@
 //
 
 import UIKit
+import Kingfisher
 
-private let reuseIdentifier = "Cell"
+//private let reuseIdentifier = "Cell"
 
-class SportViewController: UICollectionViewController {
+class SportViewController: UICollectionViewController ,SportsViewProtocol{
+    var sportsList:Array<SportEntity>?
+    var sportPersenter:SportsPersenter?
+    
+    func showSports(sports: Array<SportEntity>) {
+        sportsList = sports
+        print((sportsList?.count)!)
+        self.collectionView?.reloadData()
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        sportsList = Array<SportEntity>()
+        sportPersenter = SportsPersenter(sportsview: self)
+        sportPersenter?.getSports()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+
 
         // Do any additional setup after loading the view.
     }
@@ -29,6 +42,9 @@ class SportViewController: UICollectionViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+       //showSports(sports: sportsList!)
+    }
     /*
     // MARK: - Navigation
 
@@ -43,18 +59,37 @@ class SportViewController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        if(((sportsList?.count)!)==0||(sportsList?.count)!==nil){
+        
+            return 0
+
+        }
+        else{
+        return (sportsList?.count)!
+        }
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
+         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SportsCollectionViewCell
+        if(((sportsList?.count)!)==0||(sportsList?.count)!==nil){
+            
+        }
+        else
+        {
+            cell.sportName.text = sportsList?[indexPath.row].sportName
+        
+            let imageUrl = URL(string: (sportsList?[indexPath.row].sportThumb)!)
+            cell.sportImage.kf.setImage(with: imageUrl)
+
+        }
+        
+
         // Configure the cell
     
         return cell
