@@ -1,0 +1,32 @@
+PODS:
+  - Alamofire (4.2.0)
+  - Kingfisher (4.7.0)
+  - RxSwift (4.2.0)
+  - SwiftyJSON (4.2.0)
+  - YoutubePlayer-in-WKWebView (0.2.5)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.2.0)
+  - Kingfisher (~> 4.7.0)
+  - RxSwift (~> 4.2.0)
+  - SwiftyJSON (~> 4.2.0)
+  - YoutubePlayer-in-WKWebView (~> 0.2.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Kingfisher
+    - RxSwift
+    - SwiftyJSON
+    - YoutubePlayer-in-WKWebView
+
+SPEC CHECKSUMS:
+  Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
+  Kingfisher: da6b005aa96d37698e3e4f1ccfe96a5b9bbf27d6
+  RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
+  SwiftyJSON: c4bcba26dd9ec7a027fc8eade48e2c911f229e96
+  YoutubePlayer-in-WKWebView: 4dad12b3ece938a6456fa4374df78942f88b485a
+
+PODFILE CHECKSUM: 166b47f37516ab629e493c4141f3aa35c0cb35de
+
+COCOAPODS: 1.9.0
