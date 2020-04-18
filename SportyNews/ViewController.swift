@@ -14,17 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-       /* /*get all sports*/
-        // Do any additional setup after loading the view, typically from a nib.
-            APIURLs.searchLeagueKey = "Soccer"
-        _ = NetworkService.INSTANCE.getResponse(withURL: APIURLs.sportsURL,  ProcessResult: {
-            json in let sportArray = Mapper.jsonToSportsList(fromJson: json)
-            sportArray.forEach({
-                sport in
-                print("SportName: \(sport.sportName)")
-                })
-        })
-         
+   
         /*get leagues per sport**/
         NetworkService.INSTANCE.getResponse(withURL: APIURLs.searchLeagueURL, ProcessResult: {
             json in
