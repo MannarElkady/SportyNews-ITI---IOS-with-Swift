@@ -40,7 +40,7 @@ class ViewController: UIViewController {
             }
         )*/
         
-        //get teams by league name
+        /*//get teams by league name
         
         APIURLs.searchTeamKey = "Albanian Superliga".split(separator: " ").joined(separator: "%20")
         NetworkService.INSTANCE.getResponse(withURL: APIURLs.searchTeamLeagueURL, ProcessResult: {
@@ -52,17 +52,49 @@ class ViewController: UIViewController {
             })
         })
         
+        //get league by sport name
         APIURLs.searchLeagueKey = "Soccer"
-        NetworkService.INSTANCE.getResponse(withURL: APIURLs.searchLeagueURL, ProcessResult: {
+        NetworkService.INSTANCE.getResponse(withURL: APIURLs.searchLeagueWithSportNameURL, ProcessResult: {
             json in
             //print(json)
             Mapper.jsonToLeaguesList(fromJson: json).forEach({
                 league in
-                print(league.leagueName)
+                print((league as! LeagueEntity).leagueName)
             })
             }
-        )
-
+        )*/
+        
+        //get past events with league id
+        /*APIURLs.searchEventsWithLeagueIDKey = "4618"
+        NetworkService.INSTANCE.getResponse(withURL: APIURLs.searchPastEventWithLeagueIDURL, ProcessResult: {
+            json in
+            //print(json)
+            Mapper.jsonToEventList(fromJson: json).forEach({
+                event in
+                print(event.eventName!)
+                print(event.eventTime!)
+                print(event.eventDate!)
+                print(event.firstTeam?.teamName!)
+                print(event.firstTeamScore!)
+            })
+            }
+        )*/
+        
+        //get Upcoming events with league id
+        APIURLs.searchEventsWithLeagueIDKey = "4328"
+        NetworkService.INSTANCE.getResponse(withURL: APIURLs.searchUpcomingEventWithLeagueIDURL, ProcessResult: {
+            json in
+            //print(json)
+            Mapper.jsonToEventList(fromJson: json).forEach({
+                event in
+                print(event.eventName!)
+                print(event.eventTime!)
+                print(event.eventDate!)
+                print(event.firstTeam?.teamName!)
+                print(event.secondTeam?.teamName!)
+                print(event.firstTeamScore!)
+            })}
+            )
     }
         
 

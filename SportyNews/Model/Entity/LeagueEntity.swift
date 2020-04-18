@@ -11,4 +11,5 @@ class LeagueEntity{
     var leagueName : String?
     var leagueBadge : String?
     var leagueVideoLink : String?
+    var leagueID : String?
 }
