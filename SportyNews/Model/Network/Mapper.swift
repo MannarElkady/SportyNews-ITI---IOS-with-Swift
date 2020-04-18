@@ -45,9 +45,9 @@ class Mapper{
         customarray.forEach({ json in
             let team = TeamEntity()
             team.teamName = json["strTeam"].stringValue
-            print(team.teamName)
+         //   print(team.teamName)
             team.teamBadge = json["strTeamBadge"].stringValue
-            print(team.teamBadge)
+         //   print(team.teamBadge)
             team.teamCountry = json["strCountry"].stringValue
             team.teamSport = json["strSport"].stringValue
             teamArray.append(team)
@@ -55,18 +55,39 @@ class Mapper{
         return teamArray
     }
     
-    public static func jsonToLeaguesList(fromJson json: JSON) -> Array<LeagueEntity>{
+    public static func jsonToLeaguesList(fromJson json: JSON) -> Array<Any>{
+        
         var leagueArray = Array<LeagueEntity>()
         let customarray = json["countrys"].arrayValue
         customarray.forEach({ json in
             let league = LeagueEntity()
-            ///print(json["strSport"].stringValue)
+            //print(json["strSport"].stringValue)
             league.leagueBadge = json["strBadge"].stringValue
             league.leagueName = json["strLeague"].stringValue
             league.leagueVideoLink = json["strYoutube"].stringValue
+            league.leagueID = json["idLeague"].stringValue
             leagueArray.append(league)
         })
-        return leagueArray
+        return leagueArray as Array<LeagueEntity>
     }
     
+    public static func jsonToEventList(fromJson json: JSON) -> Array<EventEntity>{
+        var eventArray = Array<EventEntity>()
+        let customarray = json["events"].arrayValue
+        customarray.forEach({ json in
+            let event = EventEntity()
+            print(json["idLeague"].stringValue)
+            event.eventName = json["strEvent"].stringValue
+            event.eventDate = json["dateEvent"].stringValue
+            event.eventTime = json["strTime"].stringValue
+            event.firstTeam = TeamEntity()
+            event.secondTeam = TeamEntity()
+            event.firstTeam?.teamName = json["strHomeTeam"].stringValue
+            event.secondTeam?.teamName = json["strAwayTeam"].stringValue
+            event.firstTeamScore = json["intHomeScore"].stringValue
+            event.secondTeamScore = json["intAwayScore"].stringValue
+            eventArray.append(event)
+        })
+        return eventArray
+    }
 }

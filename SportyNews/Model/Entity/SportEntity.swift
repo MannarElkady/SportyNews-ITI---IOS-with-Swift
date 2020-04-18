@@ -15,6 +15,7 @@ class SportEntity{
     }
     init(){
         sportThumb = ""
+        
         sportName = ""
     }
     var sportName : String
