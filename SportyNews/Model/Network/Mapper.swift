@@ -2,7 +2,7 @@
 //  Mapper.swift
 //  SportyNews
 //
-//  Created by Esraa Hassan on 4/18/20.
+//  Created by Manar on 4/18/20.
 //  Copyright © 2020 ITI. All rights reserved.
 //
 
@@ -30,13 +30,43 @@ class Mapper{
         jsonArray.forEach({ json in
             let league = LeagueEntity()
             league.leagueBadge = json["strBadge"].stringValue
-            print(league.leagueBadge)
+           // print(league.leagueBadge)
             league.leagueName = json["strLeague"].stringValue
-            print(league.leagueName)
+         //   print(league.leagueName)
             league.leagueVideoLink = json["strYoutube"].stringValue
-            print(league.leagueVideoLink)
+         //   print(league.leagueVideoLink)
             leagueArray.append(league)
         })
         return leagueArray
     }
+    public static func jsonToTeamList(fromJson json: JSON) -> Array<TeamEntity>{
+        var teamArray = Array<TeamEntity>()
+        let customarray = json["countrys"].arrayValue
+        customarray.forEach({ json in
+            let team = TeamEntity()
+            team.teamName = json["strTeam"].stringValue
+            print(team.teamName)
+            team.teamBadge = json["strTeamBadge"].stringValue
+            print(team.teamBadge)
+            team.teamCountry = json["strCountry"].stringValue
+            team.teamSport = json["strSport"].stringValue
+            teamArray.append(team)
+        })
+        return teamArray
+    }
+    
+    public static func jsonToLeaguesList(fromJson json: JSON) -> Array<LeagueEntity>{
+        var leagueArray = Array<LeagueEntity>()
+        let customarray = json["countrys"].arrayValue
+        customarray.forEach({ json in
+            let league = LeagueEntity()
+            ///print(json["strSport"].stringValue)
+            league.leagueBadge = json["strBadge"].stringValue
+            league.leagueName = json["strLeague"].stringValue
+            league.leagueVideoLink = json["strYoutube"].stringValue
+            leagueArray.append(league)
+        })
+        return leagueArray
+    }
+    
 }
