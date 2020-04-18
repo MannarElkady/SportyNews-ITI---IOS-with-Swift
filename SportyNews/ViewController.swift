@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         
    
         /*get leagues per sport**/
-        NetworkService.INSTANCE.getResponse(withURL: APIURLs.searchLeagueURL, ProcessResult: {
+        /*NetworkService.INSTANCE.getResponse(withURL: APIURLs.searchLeagueURL, ProcessResult: {
             json in
            // print(json)
             //print(json["countrys"].arrayValue.count)

@@ -10,6 +10,11 @@ import UIKit
 
 class LeaguesTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var leagueNameTextView: UILabel!
+    @IBOutlet weak var logoLeagueImageView: UIImageView!
+    @IBOutlet weak var youtubeImageView: UIImageView!
+    @IBAction func youtubeGestureAction(_ sender: Any) {
+    }
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +24,7 @@ class LeaguesTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+        print("Tabbed from youtube link")
     }
 
 }

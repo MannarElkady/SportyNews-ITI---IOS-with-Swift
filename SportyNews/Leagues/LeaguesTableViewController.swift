@@ -2,22 +2,31 @@
 //  LeaguesTableViewController.swift
 //  SportyNews
 //
-//  Created by Esraa Hassan on 4/18/20.
+//  Created by Manar Abdelbaset on 4/18/20.
 //  Copyright © 2020 ITI. All rights reserved.
 //
 
 import UIKit
 
-class LeaguesTableViewController: UITableViewController {
+class LeaguesTableViewController: UITableViewController, ControllerContract {
+    var sportName: String?
+    var leaguesArray: Array<LeagueEntity>?
+    var presenterLeague = LeaguePresenter()
+    func displayLeagues(LeaguesArray array: Array<LeagueEntity>) {
+        print("teet")
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        if let name = sportName {
+            presenterLeague.getLeague(sportName: sportName!)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,12 +38,16 @@ class LeaguesTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        guard let count = leaguesArray?.count
+        else{
+            return 0
+        }
+        return leaguesArray!.count
     }
 
     /*
