@@ -7,3 +7,8 @@
 //
 
 import Foundation
+class LeagueEntity{
+    var leagueName : String?
+    var leagueBadge : String?
+    var leagueVideoLink : String?
+}
