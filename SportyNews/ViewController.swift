@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         
    
         /*get leagues per sport**/
+
         /*NetworkService.INSTANCE.getResponse(withURL: APIURLs.searchLeagueURL, ProcessResult: {
             json in
            // print(json)
@@ -84,9 +85,8 @@ class ViewController: UIViewController {
                 print(event.secondTeam?.teamName!)
                 print(event.firstTeamScore!)
             })}
-            )
+            )*/
     }
-        
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

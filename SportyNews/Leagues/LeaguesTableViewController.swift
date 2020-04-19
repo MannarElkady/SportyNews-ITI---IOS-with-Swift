@@ -7,21 +7,39 @@
 //
 
 import UIKit
+import Kingfisher
 
-class LeaguesTableViewController: UITableViewController, ControllerContract {
+class LeaguesTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,
+ControllerContract {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var sportNameTextField: UILabel!
     var sportName: String?
+    
     var leaguesArray: Array<LeagueEntity>?
+    
     var presenterLeague = LeaguePresenter()
+    
     func displayLeagues(LeaguesArray array: Array<LeagueEntity>) {
-        print("teet")
+        leaguesArray?.removeAll()
+        leaguesArray = array
+        
+        leaguesArray?.forEach({ league in
+            print("\n*******************\(league.leagueName)")
+        })
+        print(leaguesArray?.count)
+        tableView.reloadData()
     }
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenterLeague.controller = self
+        self.sportNameTextField?.text = sportName
+      //  print("\n\n FromViewDidLoadLeagusWIthSport: \(sportName)")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         if let name = sportName {
@@ -36,12 +54,12 @@ class LeaguesTableViewController: UITableViewController, ControllerContract {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         guard let count = leaguesArray?.count
         else{
@@ -50,15 +68,29 @@ class LeaguesTableViewController: UITableViewController, ControllerContract {
         return leaguesArray!.count
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
     }
-    */
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("ndyfa")
+        
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "leagueCell", for: indexPath) as! LeaguesTableViewCell
+        if (leaguesArray?.count) != nil{
+           
+            cell.leagueNameTextView.text = leaguesArray?[indexPath.row].leagueName
+            cell.logoLeagueImageView.layer.cornerRadius = cell.logoLeagueImageView.frame.size.width/2
+              cell.logoLeagueImageView.clipsToBounds = true
+            cell.logoLeagueImageView.kf.setImage(with: URL(string: (leaguesArray?[indexPath.row].leagueBadge)!))
+            cell.league = leaguesArray?[indexPath.row]
+            cell.youtubeButton.clipsToBounds =  true
+            cell.youtubeButton.setImage(UIImage(named: "youtube"),for: .highlighted)
+            cell.youtubeButton.setImage(UIImage(named: "youtube"),for: .normal)
+        }
+         return cell
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.

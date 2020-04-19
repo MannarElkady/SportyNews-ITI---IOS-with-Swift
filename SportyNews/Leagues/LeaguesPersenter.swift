@@ -9,17 +9,21 @@
 import Foundation
 
 class LeaguePresenter : PresenterContract{
+    var controller : ControllerContract?
     func getLeague(sportName name: String) {
-        APIURLs.searchLeagueKey = name
-        NetworkService.INSTANCE.getResponse(withURL: APIURLs.searchLeagueWithSportNameURL, ProcessResult: {
+        APIURLs.searchLeagueKey = name.split(separator: " ").joined(separator: "%20")
+        print(name.split(separator: " ").joined(separator: "%20"))
+        NetworkService.INSTANCE.getResponse(withURL:URL(string: "\(APIURLs.leagueSearchString)\(APIURLs.searchLeagueKey!)")!, ProcessResult: {
             json in
-            Mapper.jsonToLeaguesList(fromJson: json).forEach({
+            
+            let leagueArray = Mapper.jsonToLeaguesList(fromJson: json)
+                leagueArray.forEach({
                 league in
-                print((league as! LeagueEntity).leagueName!)
+                    
+                    print((league as! LeagueEntity).leagueName)
             })
+            self.controller?.displayLeagues(LeaguesArray: leagueArray as! Array<LeagueEntity>)
             }
         )
     }
-    
-    
 }

@@ -16,7 +16,6 @@ class NetworkService{
     }
     
     private func generateOperationQueue(){
-        
     }
     func getResponse(withURL url : URL,ProcessResult onComplete: @escaping (JSON) -> ()){
         var json : JSON?
