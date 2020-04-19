@@ -106,7 +106,9 @@ class SportViewController: UIViewController ,SportsViewProtocol,UICollectionView
         let width = view.frame.size.width
         return CGSize(width: width * 0.5, height: height * 0.2)
     }
-    
+    /*override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        <#code#>
+    }*/
     
     // MARK: UICollectionViewDelegate
 
