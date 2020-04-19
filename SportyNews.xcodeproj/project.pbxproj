@@ -47,6 +47,7 @@
 		BADA90CC244CBE2C0044D817 /* TeamsCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA90CB244CBE2C0044D817 /* TeamsCollectionCell.swift */; };
 		BADA90CE244CBE880044D817 /* Splashjpg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BADA90CD244CBE870044D817 /* Splashjpg.jpg */; };
 		BADA90D0244CBE930044D817 /* trophy.png in Resources */ = {isa = PBXBuildFile; fileRef = BADA90CF244CBE920044D817 /* trophy.png */; };
+		BADA90D2244CDDCE0044D817 /* LeaguesDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA90D1244CDDCD0044D817 /* LeaguesDetailsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +94,7 @@
 		BADA90CB244CBE2C0044D817 /* TeamsCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsCollectionCell.swift; sourceTree = "<group>"; };
 		BADA90CD244CBE870044D817 /* Splashjpg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Splashjpg.jpg; sourceTree = "<group>"; };
 		BADA90CF244CBE920044D817 /* trophy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trophy.png; sourceTree = "<group>"; };
+		BADA90D1244CDDCD0044D817 /* LeaguesDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		C542F5BBB948998C4D360412 /* Pods_SportyNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SportyNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -159,6 +161,7 @@
 				BADA90C7244CBDCF0044D817 /* LatestCollectionCell.swift */,
 				BADA90C9244CBE040044D817 /* UpcomingCollectionCell.swift */,
 				BADA90CB244CBE2C0044D817 /* TeamsCollectionCell.swift */,
+				BADA90D1244CDDCD0044D817 /* LeaguesDetailsTableViewCell.swift */,
 			);
 			path = LeaguesDetails;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				BA789B77244B2F8400D17ED0 /* Mapper.swift in Sources */,
 				BA212DC3244B7972008AD849 /* LeaguesPersenter.swift in Sources */,
 				BA5B0CDC244A110C00E62F86 /* SportyNews.xcdatamodeld in Sources */,
+				BADA90D2244CDDCE0044D817 /* LeaguesDetailsTableViewCell.swift in Sources */,
 				BA212DC1244B57F0008AD849 /* SportsPersenter.swift in Sources */,
 				BADA90C6244CBD630044D817 /* LeagueDetailsPresenter.swift in Sources */,
 				BADA90CA244CBE040044D817 /* UpcomingCollectionCell.swift in Sources */,
