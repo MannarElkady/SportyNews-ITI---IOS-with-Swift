@@ -16,8 +16,21 @@ class LeaguesTableViewCell: UITableViewCell {
     @IBOutlet weak var logoLeagueImageView: UIImageView!
     
     @IBAction func youtubeButtonAction(_ sender: UIButton) {
+        print("League link:\((league?.leagueVideoLink!)!) and ID: \(league?.leagueID)")
+        if (!(league?.leagueVideoLink!)!.isEmpty) {
+        let appURL = URL(string: "https://\((league?.leagueVideoLink)!)")!
+        let webURL = URL(string: "https://\((league?.leagueVideoLink)!)")!
+            let application = UIApplication.shared
+            print(webURL.absoluteString)
+            if application.canOpenURL(appURL) {
+                application.open(appURL)
+            } else {
+                // if Youtube app is not installed, open URL inside Safari
+                application.open(webURL)
+            }
+        }
+        
     }
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -69,7 +69,7 @@ ControllerContract {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return 110
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("ndyfa")
@@ -78,11 +78,10 @@ ControllerContract {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "leagueCell", for: indexPath) as! LeaguesTableViewCell
         if (leaguesArray?.count) != nil{
-          //  print("Data for this row\(leaguesArray?[indexPath.row].leagueName)")
+           
             cell.leagueNameTextView.text = leaguesArray?[indexPath.row].leagueName
             cell.logoLeagueImageView.layer.cornerRadius = cell.logoLeagueImageView.frame.size.width/2
               cell.logoLeagueImageView.clipsToBounds = true
-            cell.logoLeagueImageView.backgroundColor = UIColor.blue
             cell.logoLeagueImageView.kf.setImage(with: URL(string: (leaguesArray?[indexPath.row].leagueBadge)!))
             cell.league = leaguesArray?[indexPath.row]
             cell.youtubeButton.clipsToBounds =  true
@@ -92,7 +91,9 @@ ControllerContract {
          return cell
     }
     
-
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Available Leagues"
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

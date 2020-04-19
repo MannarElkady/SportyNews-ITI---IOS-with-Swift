@@ -119,7 +119,6 @@ class SportViewController: UIViewController ,SportsViewProtocol,UICollectionView
     }
     */
 
-    
      //Uncomment this method to specify if the specified item should be selected
   
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
@@ -127,7 +126,7 @@ class SportViewController: UIViewController ,SportsViewProtocol,UICollectionView
         let leagueStoryBoard = UIStoryboard(name: "LeaguesStoryboard", bundle: nil)
         let leagueViewController = leagueStoryBoard.instantiateViewController(withIdentifier: "leaguesTableViewController") as! LeaguesTableViewController
         leagueViewController.sportName = sportsList?[indexPath.row].sportName
-        self.present(leagueViewController, animated: true, completion: nil)
+        self.navigationController?.pushViewController(leagueViewController, animated: true)
         return true
     }
   

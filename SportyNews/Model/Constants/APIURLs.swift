@@ -24,13 +24,13 @@ class APIURLs {
     /****** URLs******/
     static let sportsURL : URL = URL(string: sportString)!
     
-    static let searchUpcomingEventWithLeagueIDURL : URL =  URL(string: "\(upcomingEventSearchLeagueString)\(searchEventsWithLeagueIDKey!)")!
+    static var searchUpcomingEventWithLeagueIDURL : URL =  URL(string: "\(upcomingEventSearchLeagueString)\(searchEventsWithLeagueIDKey!)")!
     
-    static let searchPastEventWithLeagueIDURL : URL =  URL(string: "\(pastEventSearchLeagueString)\(searchEventsWithLeagueIDKey!)")!
+    static var searchPastEventWithLeagueIDURL : URL =  URL(string: "\(pastEventSearchLeagueString)\(searchEventsWithLeagueIDKey!)")!
     
-    static let searchLeagueWithSportNameURL : URL = URL(string: "\(leagueSearchString)\(searchLeagueKey!)")!
+    //static var searchLeagueWithSportNameURL : URL = URL(string: "\(leagueSearchString)\(searchLeagueKey!)")!
     
-    static let searchTeamLeagueURL : URL = URL(string: "\(teamSearchLeagueString)\(searchTeamKey!)")!
+    static var searchTeamLeagueURL : URL = URL(string: "\(teamSearchLeagueString)\(searchTeamKey!)")!
     
 }
 

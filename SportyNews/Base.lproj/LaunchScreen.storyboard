@@ -15,7 +15,23 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sporty News" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vtd-sT-eLl">
+                                <rect key="frame" x="75.5" y="423" width="263" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Vtd-sT-eLl" secondAttribute="height" multiplier="263:60" id="mah-Oa-Fjp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.22283052460093369" green="0.67098445595854916" blue="0.036242863854247125" alpha="0.602112676056338" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vtd-sT-eLl" secondAttribute="trailing" constant="75.5" id="9IM-Nl-0bn"/>
+                            <constraint firstItem="Vtd-sT-eLl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Cl2-B9-bmq"/>
+                            <constraint firstItem="Vtd-sT-eLl" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="dbs-mq-zjc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
