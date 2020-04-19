@@ -11,14 +11,16 @@ import Kingfisher
 
 //private let reuseIdentifier = "Cell"
 
-class SportViewController: UICollectionViewController ,SportsViewProtocol{
+class SportViewController: UIViewController ,SportsViewProtocol,UICollectionViewDelegate,UICollectionViewDataSource{
     var sportsList:Array<SportEntity>?
     var sportPersenter:SportsPersenter?
     
+    @IBOutlet var collectionView: UICollectionView!
     func showSports(sports: Array<SportEntity>) {
         sportsList = sports
         print((sportsList?.count)!)
-        self.collectionView?.reloadData()
+        collectionView.reloadData()
+        
     }
     
 
@@ -59,13 +61,13 @@ class SportViewController: UICollectionViewController ,SportsViewProtocol{
 
     // MARK: UICollectionViewDataSource
 
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+     func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
 
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
         if(((sportsList?.count)!)==0||(sportsList?.count)!==nil){
         
@@ -77,7 +79,7 @@ class SportViewController: UICollectionViewController ,SportsViewProtocol{
         }
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
          let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SportsCollectionViewCell
         if(((sportsList?.count)!)==0||(sportsList?.count)!==nil){
             
@@ -96,15 +98,7 @@ class SportViewController: UICollectionViewController ,SportsViewProtocol{
     
         return cell
     }
-    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
-        let headerview = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath as IndexPath)as! SportsCollectionReusableView
-            headerview.header.text="Sports"
-                if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.sectionHeadersPinToVisibleBounds = true
-            layout.headerReferenceSize = CGSize(width: 10, height: 100)
-        }
-        return headerview
-    }
+
    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
@@ -127,14 +121,16 @@ class SportViewController: UICollectionViewController ,SportsViewProtocol{
 
     
      //Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        print("\n\n\n****select Sport: \(sportsList![indexPath.row].sportName)")
+  
+    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        print("\(sportsList![indexPath.row].sportName)")
         let leagueStoryBoard = UIStoryboard(name: "LeaguesStoryboard", bundle: nil)
         let leagueViewController = leagueStoryBoard.instantiateViewController(withIdentifier: "leaguesTableViewController") as! LeaguesTableViewController
         leagueViewController.sportName = sportsList?[indexPath.row].sportName
         self.present(leagueViewController, animated: true, completion: nil)
         return true
     }
+  
  
 
     /*

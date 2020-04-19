@@ -22,7 +22,13 @@ ControllerContract {
     var presenterLeague = LeaguePresenter()
     
     func displayLeagues(LeaguesArray array: Array<LeagueEntity>) {
+        leaguesArray?.removeAll()
         leaguesArray = array
+        
+        leaguesArray?.forEach({ league in
+            print("\n*******************\(league.leagueName)")
+        })
+        print(leaguesArray?.count)
         tableView.reloadData()
     }
     
@@ -31,9 +37,9 @@ ControllerContract {
         super.viewDidLoad()
         presenterLeague.controller = self
         self.sportNameTextField?.text = sportName
+      //  print("\n\n FromViewDidLoadLeagusWIthSport: \(sportName)")
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         if let name = sportName {
@@ -72,7 +78,7 @@ ControllerContract {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "leagueCell", for: indexPath) as! LeaguesTableViewCell
         if (leaguesArray?.count) != nil{
-            print("Data for this row\(leaguesArray?[indexPath.row].leagueName)")
+          //  print("Data for this row\(leaguesArray?[indexPath.row].leagueName)")
             cell.leagueNameTextView.text = leaguesArray?[indexPath.row].leagueName
             cell.logoLeagueImageView.layer.cornerRadius = cell.logoLeagueImageView.frame.size.width/2
               cell.logoLeagueImageView.clipsToBounds = true
