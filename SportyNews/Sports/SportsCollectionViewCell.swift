@@ -10,7 +10,9 @@ import UIKit
 
 class SportsCollectionViewCell: UICollectionViewCell {
     
+    
     @IBOutlet var sportImage: UIImageView!
     
     @IBOutlet var sportName: UILabel!
+   
 }
