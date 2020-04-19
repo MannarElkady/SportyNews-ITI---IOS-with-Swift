@@ -7,28 +7,46 @@
 //
 
 import UIKit
+import Kingfisher
 
-private let reuseIdentifier = "Cell"
+//private let reuseIdentifier = "Cell"
 
-class SportViewController: UICollectionViewController {
+class SportViewController: UICollectionViewController ,SportsViewProtocol{
+    var sportsList:Array<SportEntity>?
+    var sportPersenter:SportsPersenter?
+    
+    func showSports(sports: Array<SportEntity>) {
+        sportsList = sports
+        print((sportsList?.count)!)
+        self.collectionView?.reloadData()
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        sportsList = Array<SportEntity>()
+        sportPersenter = SportsPersenter(sportsview: self)
+        sportPersenter?.getSports()
+     
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+
 
         // Do any additional setup after loading the view.
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+       //showSports(sports: sportsList!)
+    }
     /*
     // MARK: - Navigation
 
@@ -43,23 +61,59 @@ class SportViewController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        if(((sportsList?.count)!)==0||(sportsList?.count)!==nil){
+        
+            return 0
+
+        }
+        else{
+        return (sportsList?.count)!
+        }
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
+         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SportsCollectionViewCell
+        if(((sportsList?.count)!)==0||(sportsList?.count)!==nil){
+            
+        }
+        else
+        {
+            cell.sportName.text = sportsList?[indexPath.row].sportName
+        
+            let imageUrl = URL(string: (sportsList?[indexPath.row].sportThumb)!)
+            cell.sportImage.kf.setImage(with: imageUrl)
+
+        }
+        
+
         // Configure the cell
     
         return cell
     }
-
+    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+        let headerview = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath as IndexPath)as! SportsCollectionReusableView
+            headerview.header.text="Sports"
+                if let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.sectionHeadersPinToVisibleBounds = true
+            layout.headerReferenceSize = CGSize(width: 10, height: 100)
+        }
+        return headerview
+    }
+   
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let height = view.frame.size.height
+        let width = view.frame.size.width
+        return CGSize(width: width * 0.5, height: height * 0.2)
+    }
+    
+    
     // MARK: UICollectionViewDelegate
 
     /*
@@ -69,12 +123,17 @@ class SportViewController: UICollectionViewController {
     }
     */
 
-    /*
-    // Uncomment this method to specify if the specified item should be selected
+    
+     //Uncomment this method to specify if the specified item should be selected
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
+        print("\(sportsList![indexPath.row].sportName)")
+        let leagueStoryBoard = UIStoryboard(name: "LeaguesStoryboard", bundle: nil)
+        let leagueViewController = leagueStoryBoard.instantiateViewController(withIdentifier: "leaguesTableViewController") as! LeaguesTableViewController
+        leagueViewController.sportName = sportsList?[indexPath.row].sportName
+        self.present(leagueViewController, animated: true, completion: nil)
         return true
     }
-    */
+ 
 
     /*
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
