@@ -38,6 +38,10 @@
 		BADA90B0244C5BC90044D817 /* TeamPersenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA90AF244C5BC90044D817 /* TeamPersenter.swift */; };
 		BADA90B4244C5C770044D817 /* TeamViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA90B3244C5C770044D817 /* TeamViewController.swift */; };
 		BADA90B7244C5CD30044D817 /* LocalDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA90B6244C5CD30044D817 /* LocalDataStore.swift */; };
+		BADA90BA244C8EC60044D817 /* TeamDetailsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA90B9244C8EC60044D817 /* TeamDetailsProtocol.swift */; };
+		BADA90BC244C8EE70044D817 /* TeamDetailsPersenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA90BB244C8EE70044D817 /* TeamDetailsPersenter.swift */; };
+		BADA90C0244C92830044D817 /* TeamDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BADA90BF244C92830044D817 /* TeamDetailsViewController.swift */; };
+		BADA90C2244C95350044D817 /* background.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BADA90C1244C95340044D817 /* background.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +79,10 @@
 		BADA90AF244C5BC90044D817 /* TeamPersenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamPersenter.swift; sourceTree = "<group>"; };
 		BADA90B3244C5C770044D817 /* TeamViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamViewController.swift; sourceTree = "<group>"; };
 		BADA90B6244C5CD30044D817 /* LocalDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataStore.swift; sourceTree = "<group>"; };
+		BADA90B9244C8EC60044D817 /* TeamDetailsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsProtocol.swift; sourceTree = "<group>"; };
+		BADA90BB244C8EE70044D817 /* TeamDetailsPersenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsPersenter.swift; sourceTree = "<group>"; };
+		BADA90BF244C92830044D817 /* TeamDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsViewController.swift; sourceTree = "<group>"; };
+		BADA90C1244C95340044D817 /* background.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpeg; sourceTree = "<group>"; };
 		C542F5BBB948998C4D360412 /* Pods_SportyNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SportyNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -162,6 +170,8 @@
 			isa = PBXGroup;
 			children = (
 				BA212DC6244BA6EB008AD849 /* youtube.png */,
+				BADA90C1244C95340044D817 /* background.jpeg */,
+				BADA90B8244C8E6E0044D817 /* TeamDetails */,
 				BA212D9F244B3CF9008AD849 /* LeaguesDetails */,
 				BA212D9E244B3CE9008AD849 /* Teams */,
 				BA212D9D244B3CD6008AD849 /* Leagues */,
@@ -224,6 +234,16 @@
 				BADA90B6244C5CD30044D817 /* LocalDataStore.swift */,
 			);
 			path = LocalDatabase;
+			sourceTree = "<group>";
+		};
+		BADA90B8244C8E6E0044D817 /* TeamDetails */ = {
+			isa = PBXGroup;
+			children = (
+				BADA90B9244C8EC60044D817 /* TeamDetailsProtocol.swift */,
+				BADA90BB244C8EE70044D817 /* TeamDetailsPersenter.swift */,
+				BADA90BF244C92830044D817 /* TeamDetailsViewController.swift */,
+			);
+			path = TeamDetails;
 			sourceTree = "<group>";
 		};
 		EBA318051B02595E0D290A77 /* Pods */ = {
@@ -295,6 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BADA90C2244C95350044D817 /* background.jpeg in Resources */,
 				BA212DB3244B47CB008AD849 /* LeaguesTableViewController.xib in Resources */,
 				BA212DB5244B4825008AD849 /* LeaguesStoryboard.storyboard in Resources */,
 				BA5B0CE1244A111400E62F86 /* LaunchScreen.storyboard in Resources */,
@@ -346,9 +367,11 @@
 				BA789B6D244B2EED00D17ED0 /* APIURLs.swift in Sources */,
 				BADA90B4244C5C770044D817 /* TeamViewController.swift in Sources */,
 				BADA90B0244C5BC90044D817 /* TeamPersenter.swift in Sources */,
+				BADA90BC244C8EE70044D817 /* TeamDetailsPersenter.swift in Sources */,
 				BA212DA1244B40A8008AD849 /* SpotrsProtocols.swift in Sources */,
 				BA789B70244B2F1D00D17ED0 /* LeagueEntity.swift in Sources */,
 				BA212DA5244B411E008AD849 /* TeamsProtocols.swift in Sources */,
+				BADA90C0244C92830044D817 /* TeamDetailsViewController.swift in Sources */,
 				BA212DBD244B4D5A008AD849 /* TeamEntity.swift in Sources */,
 				BA5B0CD6244A110C00E62F86 /* ViewController.swift in Sources */,
 				BA212DA3244B40DB008AD849 /* LeaguesProtocols.swift in Sources */,
@@ -367,6 +390,7 @@
 				BA5B0CD4244A110C00E62F86 /* AppDelegate.swift in Sources */,
 				BA789B75244B2F6F00D17ED0 /* NetworkService.swift in Sources */,
 				BA212DAD244B4376008AD849 /* SportViewController.swift in Sources */,
+				BADA90BA244C8EC60044D817 /* TeamDetailsProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
