@@ -2,8 +2,26 @@
 //  LeaguesPersenter.swift
 //  SportyNews
 //
-//  Created by Esraa Hassan on 4/18/20.
+//  Created by Manar Abdelbaset on 4/18/20.
 //  Copyright © 2020 ITI. All rights reserved.
 //
 
 import Foundation
+
+class LeaguePresenter : PresenterContract{
+    var controller : ControllerContract?
+    func getLeague(sportName name: String) {
+        APIURLs.searchLeagueKey = name.split(separator: " ").joined(separator: "%20")
+        NetworkService.INSTANCE.getResponse(withURL: APIURLs.searchLeagueWithSportNameURL, ProcessResult: {
+            json in
+            
+            let leagueArray = Mapper.jsonToLeaguesList(fromJson: json)
+                leagueArray.forEach({
+                league in
+                print((league as! LeagueEntity).leagueName!)
+            })
+            self.controller?.displayLeagues(LeaguesArray: leagueArray as! Array<LeagueEntity>)
+            }
+        )
+    }
+}

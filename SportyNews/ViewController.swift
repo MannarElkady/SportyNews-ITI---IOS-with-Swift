@@ -16,20 +16,21 @@ class ViewController: UIViewController {
         
    
         /*get leagues per sport**/
-//        NetworkService.INSTANCE.getResponse(withURL: APIURLs.searchLeagueURL, ProcessResult: {
-//            json in
-//           // print(json)
-//            //print(json["countrys"].arrayValue.count)
-//            //Mapper.jsonToLeagueList(fromJson:
-//            Mapper.jsonToLeagueList(fromJson:
-//                json["countrys"].arrayValue.filter({
-//                j in
-//              //  print(j)
-//                return j["strSport"].stringValue == "Soccer"
-//                }))
-//            }
-//        )
-//
+
+        /*NetworkService.INSTANCE.getResponse(withURL: APIURLs.searchLeagueURL, ProcessResult: {
+            json in
+           // print(json)
+            //print(json["countrys"].arrayValue.count)
+            //Mapper.jsonToLeagueList(fromJson:
+            Mapper.jsonToLeagueList(fromJson:
+                json["countrys"].arrayValue.filter({
+                j in
+              //  print(j)
+                return j["strSport"].stringValue == "Soccer"
+                }))
+            }
+        )
+        
         /*//get teams by league name
         
         APIURLs.searchTeamKey = "Albanian Superliga".split(separator: " ").joined(separator: "%20")
@@ -84,9 +85,8 @@ class ViewController: UIViewController {
                 print(event.secondTeam?.teamName!)
                 print(event.firstTeamScore!)
             })}
-            )
+            )*/
     }
-        
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

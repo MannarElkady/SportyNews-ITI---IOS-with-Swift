@@ -23,6 +23,5 @@ class SportsPersenter:SportPresenterProtocol{
             })
             self.sportsview.showSports(sports: sportArray)
         })
-
     }
 }

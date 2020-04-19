@@ -30,8 +30,6 @@ class SportViewController: UIViewController ,SportsViewProtocol,UICollectionView
         sportPersenter = SportsPersenter(sportsview: self)
         sportPersenter?.getSports()
      
-    
-        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -124,6 +122,10 @@ class SportViewController: UIViewController ,SportsViewProtocol,UICollectionView
   
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         print("\(sportsList![indexPath.row].sportName)")
+        let leagueStoryBoard = UIStoryboard(name: "LeaguesStoryboard", bundle: nil)
+        let leagueViewController = leagueStoryBoard.instantiateViewController(withIdentifier: "leaguesTableViewController") as! LeaguesTableViewController
+        leagueViewController.sportName = sportsList?[indexPath.row].sportName
+        self.present(leagueViewController, animated: true, completion: nil)
         return true
     }
   
