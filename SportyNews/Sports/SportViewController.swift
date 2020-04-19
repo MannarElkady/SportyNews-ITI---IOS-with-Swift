@@ -112,7 +112,9 @@ class SportViewController: UICollectionViewController ,SportsViewProtocol{
         let width = view.frame.size.width
         return CGSize(width: width * 0.5, height: height * 0.2)
     }
-    
+    /*override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        <#code#>
+    }*/
     
     // MARK: UICollectionViewDelegate
 
@@ -126,7 +128,7 @@ class SportViewController: UICollectionViewController ,SportsViewProtocol{
     
      //Uncomment this method to specify if the specified item should be selected
     override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        print("\(sportsList![indexPath.row].sportName)")
+        print("\n\n\n****select Sport: \(sportsList![indexPath.row].sportName)")
         let leagueStoryBoard = UIStoryboard(name: "LeaguesStoryboard", bundle: nil)
         let leagueViewController = leagueStoryBoard.instantiateViewController(withIdentifier: "leaguesTableViewController") as! LeaguesTableViewController
         leagueViewController.sportName = sportsList?[indexPath.row].sportName
