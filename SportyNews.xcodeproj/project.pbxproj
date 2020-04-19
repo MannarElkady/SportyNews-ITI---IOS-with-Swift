@@ -109,8 +109,8 @@
 		BA212D9C244B3CAF008AD849 /* Sports */ = {
 			isa = PBXGroup;
 			children = (
-				BA212DA0244B40A8008AD849 /* SpotrsProtocols.swift */,
 				BA212DAC244B4376008AD849 /* SportViewController.swift */,
+				BA212DA0244B40A8008AD849 /* SpotrsProtocols.swift */,
 				BA212DBE244B5048008AD849 /* SportsCollectionViewCell.swift */,
 				BA212DC0244B57F0008AD849 /* SportsPersenter.swift */,
 			);

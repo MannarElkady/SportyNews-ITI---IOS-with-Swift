@@ -31,7 +31,6 @@ class LeaguesTableViewCell: UITableViewCell {
         }
         
     }
-    //hwrek link ya 7bebe sofo m3aya <3 <3 wariniii 7abibty 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
