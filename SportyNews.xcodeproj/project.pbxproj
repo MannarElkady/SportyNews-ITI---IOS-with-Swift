@@ -51,6 +51,9 @@
 		BAFCF057244D87DB00479BE8 /* UpcomingCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAFCF056244D87DB00479BE8 /* UpcomingCollectionCell.xib */; };
 		BAFCF059244D885B00479BE8 /* PastCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAFCF058244D885B00479BE8 /* PastCollectionCell.xib */; };
 		BAFCF05B244D887B00479BE8 /* TeamsCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BAFCF05A244D887B00479BE8 /* TeamsCollectionCell.xib */; };
+		BAFCF05E244DB4C900479BE8 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFCF05D244DB4C900479BE8 /* Reachability.swift */; };
+		BAFCF061244DE35000479BE8 /* star1.png in Resources */ = {isa = PBXBuildFile; fileRef = BAFCF05F244DE34D00479BE8 /* star1.png */; };
+		BAFCF062244DE35000479BE8 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = BAFCF060244DE34F00479BE8 /* star.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -101,6 +104,9 @@
 		BAFCF056244D87DB00479BE8 /* UpcomingCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpcomingCollectionCell.xib; sourceTree = "<group>"; };
 		BAFCF058244D885B00479BE8 /* PastCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PastCollectionCell.xib; sourceTree = "<group>"; };
 		BAFCF05A244D887B00479BE8 /* TeamsCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TeamsCollectionCell.xib; sourceTree = "<group>"; };
+		BAFCF05D244DB4C900479BE8 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		BAFCF05F244DE34D00479BE8 /* star1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star1.png; sourceTree = "<group>"; };
+		BAFCF060244DE34F00479BE8 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		C542F5BBB948998C4D360412 /* Pods_SportyNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SportyNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -196,10 +202,8 @@
 		BA5B0CD2244A110C00E62F86 /* SportyNews */ = {
 			isa = PBXGroup;
 			children = (
-				BA212DC6244BA6EB008AD849 /* youtube.png */,
-				BADA90C1244C95340044D817 /* background.jpeg */,
-				BADA90CD244CBE870044D817 /* Splashjpg.jpg */,
-				BADA90CF244CBE920044D817 /* trophy.png */,
+				BAFCF063244DE43400479BE8 /* Resources */,
+				BAFCF05C244DB3AD00479BE8 /* Utilities */,
 				BADA90B8244C8E6E0044D817 /* TeamDetails */,
 				BA212D9F244B3CF9008AD849 /* LeaguesDetails */,
 				BA212D9E244B3CE9008AD849 /* Teams */,
@@ -271,6 +275,27 @@
 				BADA90BF244C92830044D817 /* TeamDetailsViewController.swift */,
 			);
 			path = TeamDetails;
+			sourceTree = "<group>";
+		};
+		BAFCF05C244DB3AD00479BE8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				BAFCF05D244DB4C900479BE8 /* Reachability.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		BAFCF063244DE43400479BE8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BA212DC6244BA6EB008AD849 /* youtube.png */,
+				BADA90C1244C95340044D817 /* background.jpeg */,
+				BADA90CD244CBE870044D817 /* Splashjpg.jpg */,
+				BADA90CF244CBE920044D817 /* trophy.png */,
+				BAFCF05F244DE34D00479BE8 /* star1.png */,
+				BAFCF060244DE34F00479BE8 /* star.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		EBA318051B02595E0D290A77 /* Pods */ = {
@@ -345,11 +370,13 @@
 				BAFCF057244D87DB00479BE8 /* UpcomingCollectionCell.xib in Resources */,
 				BADA90CE244CBE880044D817 /* Splashjpg.jpg in Resources */,
 				BADA90C2244C95350044D817 /* background.jpeg in Resources */,
+				BAFCF061244DE35000479BE8 /* star1.png in Resources */,
 				BA212DB5244B4825008AD849 /* LeaguesStoryboard.storyboard in Resources */,
 				BADA90D0244CBE930044D817 /* trophy.png in Resources */,
 				BA5B0CE1244A111400E62F86 /* LaunchScreen.storyboard in Resources */,
 				BA212DC7244BA6EC008AD849 /* youtube.png in Resources */,
 				BA5B0CDE244A111400E62F86 /* Assets.xcassets in Resources */,
+				BAFCF062244DE35000479BE8 /* star.png in Resources */,
 				BAFCF05B244D887B00479BE8 /* TeamsCollectionCell.xib in Resources */,
 				BA5B0CD9244A110C00E62F86 /* Main.storyboard in Resources */,
 				BAFCF059244D885B00479BE8 /* PastCollectionCell.xib in Resources */,
@@ -424,6 +451,7 @@
 				BADA90CC244CBE2C0044D817 /* TeamsCollectionCell.swift in Sources */,
 				BA212DA7244B414A008AD849 /* LeaguesDetailsProtocols.swift in Sources */,
 				BAFCF055244D879500479BE8 /* TeamsTableViewCell.swift in Sources */,
+				BAFCF05E244DB4C900479BE8 /* Reachability.swift in Sources */,
 				BA5B0CD4244A110C00E62F86 /* AppDelegate.swift in Sources */,
 				BA789B75244B2F6F00D17ED0 /* NetworkService.swift in Sources */,
 				BA212DAD244B4376008AD849 /* SportViewController.swift in Sources */,

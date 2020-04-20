@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E199" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="FavouriteLeague" representedClassName="FavouriteLeague" syncable="YES" codeGenerationType="class">
+        <attribute name="leagueID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="leagueName" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="leagueThump" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="leagueYoutube" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="FavouriteLeague" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="FavouriteLeague" positionX="-63" positionY="-18" width="128" height="105"/>
     </elements>
 </model>
