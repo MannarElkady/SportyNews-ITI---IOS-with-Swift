@@ -13,11 +13,11 @@ class UpcomingTableViewCell: UITableViewCell ,UICollectionViewDelegate, UICollec
     //view
 
  @IBOutlet weak var upComingCollectionView: UICollectionView!
-var upComingEvents : Array<EventEntity>?
+var upComingEvents = Array<EventEntity>()
 
 func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-   // return upComingEvents?.count ?? 0
-    return 10
+    return upComingEvents.count
+   // return 10
 }
     
     
@@ -39,14 +39,14 @@ func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection s
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 200, height: 175)
+        return CGSize(width: 260, height: 145)
     }
 func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell : UpcomingCollectionCell = upComingCollectionView.dequeueReusableCell(withReuseIdentifier: "upcomingCollectionCell", for: indexPath) as! UpcomingCollectionCell
         	
-    cell.eventNameLabel?.text = "Manar VS Ahmed"
-    cell.eventDateLabel?.text = "14/7/2018"
-    cell.eventTimeLabel?.text = "5:37 PM"
+    cell.eventNameLabel?.text = upComingEvents[indexPath.row].eventName
+    cell.eventDateLabel?.text = upComingEvents[indexPath.row].eventDate
+    cell.eventTimeLabel?.text = upComingEvents[indexPath.row].eventTime
     
     return cell
     }

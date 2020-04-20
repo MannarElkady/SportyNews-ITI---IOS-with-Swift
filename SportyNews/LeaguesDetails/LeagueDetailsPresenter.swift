@@ -16,7 +16,7 @@ class LeagueDetailsPresenter : LeaguesDetailsPresenterContract{
             json in
             //print(json)
             let upComingEvents = Mapper.jsonToEventList(fromJson: json)
-            upComingEvents.forEach({
+            /*upComingEvents.forEach({
                 event in
                 print(event.eventName!)
                 print(event.eventTime!)
@@ -24,7 +24,7 @@ class LeagueDetailsPresenter : LeaguesDetailsPresenterContract{
                 print(event.firstTeam?.teamName!)
                 print(event.secondTeam?.teamName!)
                 print(event.firstTeamScore!)
-            })
+            })*/
             self.controller?.displayUpcomingEvents(listOfUpcomingEvents: upComingEvents)
         }
             
@@ -37,17 +37,16 @@ class LeagueDetailsPresenter : LeaguesDetailsPresenterContract{
             json in
             //print(json)
             let pastEvents = Mapper.jsonToEventList(fromJson: json)
-                pastEvents.forEach({
+                /*pastEvents.forEach({
                 event in
                 print(event.eventName!)
                 print(event.eventTime!)
                 print(event.eventDate!)
                 print(event.firstTeam?.teamName!)
                 print(event.firstTeamScore!)
-            })
+            })*/
             self.controller?.displayPastEvents(listOfPastEvents: pastEvents)
-            }
-        )
+            })
     }
     
     func getTeams(withName name: String) {
@@ -58,7 +57,7 @@ class LeagueDetailsPresenter : LeaguesDetailsPresenterContract{
             let teams = Mapper.jsonToTeamList(fromJson: json)
                 teams.forEach({
                 team in
-                print(team.teamName)
+                    print("\n\n***\(String(describing: team.teamName)) \(String(describing: team.teamBadge))")
             })
             self.controller?.displayTeams(listOfTeams: teams)
         })
@@ -72,3 +71,4 @@ class LeagueDetailsPresenter : LeaguesDetailsPresenterContract{
     
     
 }
+	

@@ -114,13 +114,13 @@
         <!--League Details View Controller-->
         <scene sceneID="FXW-RL-UhN">
             <objects>
-                <viewController storyboardIdentifier="leagueDetailsViewController" wantsFullScreenLayout="YES" id="Frt-oO-nT7" customClass="LeagueDetailsViewController" customModule="SportyNews" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="leagueDetailsViewController" wantsFullScreenLayout="YES" modalPresentationStyle="fullScreen" id="Frt-oO-nT7" customClass="LeagueDetailsViewController" customModule="SportyNews" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YcE-Ji-UE5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="cvc-58-Pun">
-                                <rect key="frame" x="0.0" y="75" width="375" height="592"/>
+                                <rect key="frame" x="0.0" y="82" width="375" height="585"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" tag="5" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="upComingCell" rowHeight="175" id="GeF-Ly-fz0" customClass="UpcomingTableViewCell" customModule="SportyNews" customModuleProvider="target">
@@ -241,45 +241,44 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <sections/>
                                 <connections>
                                     <outlet property="dataSource" destination="Frt-oO-nT7" id="y7g-ez-WP6"/>
                                     <outlet property="delegate" destination="Frt-oO-nT7" id="v4I-dW-rTE"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WGD-O1-Or0">
-                                <rect key="frame" x="16" y="23901" width="71" height="43"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gSa-27-FcM">
-                                <rect key="frame" x="305" y="24" width="54" height="43"/>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Button">
-                                            <attributes>
-                                                <font key="NSFont" metaFont="system" size="18"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <rect key="frame" x="309" y="24" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="STl-VQ-J78"/>
+                                    <constraint firstAttribute="height" constant="50" id="efP-bf-0hT"/>
+                                </constraints>
+                                <state key="normal" image="star.png">
+                                    <attributedString key="attributedTitle"/>
                                 </state>
-                                <state key="highlighted" image="timelapse" catalog="system"/>
+                                <state key="selected" image="star1.png"/>
+                                <state key="highlighted" image="star1.png"/>
                                 <connections>
                                     <action selector="leagueFavouriteButtonAction:" destination="Frt-oO-nT7" eventType="touchUpInside" id="8A5-rm-oM5"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anaaaaaa" textAlignment="natural" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="WGD-O1-Or0">
+                                <rect key="frame" x="8" y="24" width="285" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="WGD-O1-Or0" firstAttribute="top" secondItem="lUo-Fs-luK" secondAttribute="top" constant="24" id="7Yc-r2-UOC"/>
+                            <constraint firstItem="gSa-27-FcM" firstAttribute="leading" secondItem="WGD-O1-Or0" secondAttribute="trailing" constant="16" id="3wG-Um-U49"/>
+                            <constraint firstItem="WGD-O1-Or0" firstAttribute="top" secondItem="lUo-Fs-luK" secondAttribute="top" constant="24" id="6os-yn-Byj"/>
                             <constraint firstItem="lUo-Fs-luK" firstAttribute="trailing" secondItem="gSa-27-FcM" secondAttribute="trailing" constant="16" id="A1j-iu-ExP"/>
                             <constraint firstItem="lUo-Fs-luK" firstAttribute="bottom" secondItem="cvc-58-Pun" secondAttribute="bottom" id="CnB-ve-Lob"/>
                             <constraint firstItem="cvc-58-Pun" firstAttribute="leading" secondItem="lUo-Fs-luK" secondAttribute="leading" id="EXG-gV-oou"/>
                             <constraint firstItem="gSa-27-FcM" firstAttribute="top" secondItem="lUo-Fs-luK" secondAttribute="top" constant="24" id="LeC-21-X2R"/>
-                            <constraint firstItem="cvc-58-Pun" firstAttribute="top" secondItem="lUo-Fs-luK" secondAttribute="top" constant="75" id="PZX-4B-f0F"/>
-                            <constraint firstItem="cvc-58-Pun" firstAttribute="top" secondItem="WGD-O1-Or0" secondAttribute="bottom" constant="8" id="boN-m5-Rpz"/>
                             <constraint firstItem="lUo-Fs-luK" firstAttribute="trailing" secondItem="cvc-58-Pun" secondAttribute="trailing" id="dg4-ht-pfo"/>
-                            <constraint firstItem="WGD-O1-Or0" firstAttribute="leading" secondItem="lUo-Fs-luK" secondAttribute="leading" constant="16" id="jh5-OM-Mk3"/>
+                            <constraint firstItem="WGD-O1-Or0" firstAttribute="leading" secondItem="lUo-Fs-luK" secondAttribute="leading" constant="8" id="xf7-lc-kbP"/>
                             <constraint firstItem="cvc-58-Pun" firstAttribute="top" secondItem="gSa-27-FcM" secondAttribute="bottom" constant="8" id="yI3-rS-mxc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lUo-Fs-luK"/>
@@ -291,11 +290,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yev-E7-7xP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1026" y="-77"/>
+            <point key="canvasLocation" x="1024.8" y="-77.811094452773617"/>
         </scene>
     </scenes>
     <resources>
-        <image name="timelapse" catalog="system" width="64" height="60"/>
+        <image name="star.png" width="48" height="48"/>
+        <image name="star1.png" width="384" height="384"/>
         <image name="youtube.png" width="418.90908813476562" height="418.90908813476562"/>
     </resources>
 </document>

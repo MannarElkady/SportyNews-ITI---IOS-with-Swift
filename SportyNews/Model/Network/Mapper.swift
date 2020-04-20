@@ -41,11 +41,12 @@ class Mapper{
     }
     public static func jsonToTeamList(fromJson json: JSON) -> Array<TeamEntity>{
         var teamArray = Array<TeamEntity>()
-        let customarray = json["countrys"].arrayValue
+        let customarray = json["teams"].arrayValue
         customarray.forEach({ json in
             let team = TeamEntity()
             team.teamName = json["strTeam"].stringValue
-         //   print(team.teamName)
+            print("\n\n\n\n\n")
+            print(team.teamName)
             team.teamBadge = json["strTeamBadge"].stringValue
          //   print(team.teamBadge)
             team.teamCountry = json["strCountry"].stringValue

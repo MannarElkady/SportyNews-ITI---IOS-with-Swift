@@ -173,9 +173,9 @@
 				BADA90C9244CBE040044D817 /* UpcomingCollectionCell.swift */,
 				BADA90D1244CDDCD0044D817 /* UpcomingTableViewCell.swift */,
 				BAFCF052244D877600479BE8 /* PastTableViewCell.swift */,
+				BAFCF058244D885B00479BE8 /* PastCollectionCell.xib */,
 				BAFCF054244D879500479BE8 /* TeamsTableViewCell.swift */,
 				BAFCF056244D87DB00479BE8 /* UpcomingCollectionCell.xib */,
-				BAFCF058244D885B00479BE8 /* PastCollectionCell.xib */,
 				BAFCF05A244D887B00479BE8 /* TeamsCollectionCell.xib */,
 			);
 			path = LeaguesDetails;

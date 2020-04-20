@@ -10,13 +10,16 @@ import UIKit
 
 class TeamsTableViewCell: UITableViewCell ,UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
 
+    var teamsArray = Array<TeamEntity>()
     @IBOutlet weak var teamsCollectionView: UICollectionView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        
         self.teamsCollectionView.delegate = self
         self.teamsCollectionView.dataSource = self
         self.teamsCollectionView.register(UINib(nibName: "TeamsCollectionCell", bundle: nil), forCellWithReuseIdentifier: "teamsCollectionCell")
+        teamsCollectionView.reloadData()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -25,20 +28,27 @@ class TeamsTableViewCell: UITableViewCell ,UICollectionViewDelegate, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //return pastEvents?.count
-        return 10
+        print("teamsArray \(String(describing: teamsArray.count))")
+       // if let c = teamsArray.count {
+            return teamsArray.count
+       // }
+      //  return 0
     }
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print("3aaaaaaaaaaaa")
+    }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
             return 1
         }
         
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            return CGSize(width: 280, height: 180)
+            return CGSize(width: 80, height: 80)
         }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell : TeamsCollectionCell = teamsCollectionView.dequeueReusableCell(withReuseIdentifier: "teamsCollectionCell", for: indexPath) as! TeamsCollectionCell
-        cell.teamImageView.image = UIImage(named: "trophy")
+        
+        print("\n\n\n\n\n\n\n***************************\(teamsArray[indexPath.row].teamBadge)")
+        cell.teamImageView.kf.setImage(with: URL(string: (teamsArray[indexPath.row].teamBadge)!))
         return cell
         }
 
