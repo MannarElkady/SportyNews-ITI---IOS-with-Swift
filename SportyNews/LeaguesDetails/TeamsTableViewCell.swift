@@ -1,14 +1,14 @@
 //
-//  LeaguesDetailsTableViewCell.swift
+//  TeamTableViewCell.swift
 //  SportyNews
 //
-//  Created by Esraa Hassan on 4/19/20.
+//  Created by Esraa Hassan on 4/20/20.
 //  Copyright © 2020 ITI. All rights reserved.
 //
 
 import UIKit
 
-class LeaguesDetailsTableViewCell: UITableViewCell {
+class TeamsTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
