@@ -8,8 +8,26 @@
 
 import UIKit
 
-class LeaguesDetailsTableViewCell: UITableViewCell {
+class LeaguesDetailsTableViewCell: UITableViewCell,UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+    
+     @IBOutlet weak var upComingCollectionView: UICollectionView!
+    var upComingEvents : Array<EventEntity>?
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return upComingEvents?.count ?? 0
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if let cell : UpcomingCollectionCell = upComingCollectionView.dequeueReusableCell(withReuseIdentifier: "upCominCollectiongCell", for: indexPath) as! UpcomingCollectionCell{
+            
+        }
+    }
+    
 
+   
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,5 +38,7 @@ class LeaguesDetailsTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+
 
 }

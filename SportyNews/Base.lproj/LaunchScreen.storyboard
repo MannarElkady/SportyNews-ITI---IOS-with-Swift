@@ -16,21 +16,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sporty News" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vtd-sT-eLl">
-                                <rect key="frame" x="75.5" y="423" width="263" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Vtd-sT-eLl" secondAttribute="height" multiplier="263:60" id="mah-Oa-Fjp"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="48"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Splashjpg.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vwK-f7-aMI">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="characterWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7l1-lI-9j2">
+                                <rect key="frame" x="137" y="119" width="140" height="86"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Sporty ">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" size="72" name="SavoyeLetPlain"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.22283052460093369" green="0.67098445595854916" blue="0.036242863854247125" alpha="0.602112676056338" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vtd-sT-eLl" secondAttribute="trailing" constant="75.5" id="9IM-Nl-0bn"/>
-                            <constraint firstItem="Vtd-sT-eLl" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Cl2-B9-bmq"/>
-                            <constraint firstItem="Vtd-sT-eLl" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="dbs-mq-zjc"/>
+                            <constraint firstItem="7l1-lI-9j2" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="3YE-LZ-TAS"/>
+                            <constraint firstItem="vwK-f7-aMI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6ZX-UY-LfO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vwK-f7-aMI" secondAttribute="trailing" id="7Um-QC-SB5"/>
+                            <constraint firstItem="vwK-f7-aMI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CxF-By-vux"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vwK-f7-aMI" secondAttribute="bottom" id="Q9V-fN-iUT"/>
+                            <constraint firstItem="7l1-lI-9j2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="eOe-Vm-HkJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -40,4 +49,7 @@
             <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Splashjpg.jpg" width="854" height="1590"/>
+    </resources>
 </document>
