@@ -29,7 +29,18 @@ class TeamDetailsViewController: UIViewController {
         TeamDetails?.teamSport = "Soccer"
         TeamDetails?.teamCountry = "Albania"
         TeamDetails?.teamBadge = "https://www.thesportsdb.com//images//media//team//badge//pvxcv21513620873.png"
-       
+       /* tetDatBase*/
+        let league = LeagueEntity()
+        league.leagueName = "akkk"
+        league.leagueBadge = "http://fkgjlfj"
+        league.leagueVideoLink = "jdkljglkf"
+        league.leagueID = "999999"
+        CoreDataHandler.getCoreHandlerInstance().deleteFromEntity(league: league)
+        
+        
+        
+        
+        /*testDatabase*/
         
         // Do any additional setup after loading the view.
     }
@@ -42,6 +53,25 @@ class TeamDetailsViewController: UIViewController {
             teamPoster.kf.setImage(with: imageUrl)
 
     }
+        /*testDatabase*/
+        var favorit = Array<LeagueEntity>()
+        favorit = CoreDataHandler.getCoreHandlerInstance().getFavouriteLeague()
+        print(favorit.count)
+        if(favorit.count != 0){
+        for item in favorit {
+            print(item.leagueID!)
+            print(item.leagueName!)
+            print(item.leagueBadge!)
+            print(item.leagueVideoLink!)
+            
+        }
+        }
+        
+
+        /*testDatabase*/
+
+        
+        
         
     }
 
