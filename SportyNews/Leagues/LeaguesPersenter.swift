@@ -17,11 +17,6 @@ class LeaguePresenter : PresenterContract{
             json in
             
             let leagueArray = Mapper.jsonToLeaguesList(fromJson: json)
-                leagueArray.forEach({
-                league in
-                    
-                    print((league as! LeagueEntity).leagueName)
-            })
             self.controller?.displayLeagues(LeaguesArray: leagueArray as! Array<LeagueEntity>)
             }
         )

@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  SportyNews
 //
-//  Created by Esraa Hassan on 4/17/20.
+//  Created by Manar Abdelbaset on 4/17/20.
 //  Copyright © 2020 ITI. All rights reserved.
 //
 
@@ -30,7 +30,6 @@ class ViewController: UIViewController {
                 }))
             }
         )
-        
         /*//get teams by league name
         
         APIURLs.searchTeamKey = "Albanian Superliga".split(separator: " ").joined(separator: "%20")

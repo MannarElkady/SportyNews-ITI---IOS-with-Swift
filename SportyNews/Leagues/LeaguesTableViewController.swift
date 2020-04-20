@@ -72,9 +72,13 @@ ControllerContract {
         return 110
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("ndyfa")
+        print("Select item: \((leaguesArray?[indexPath.row])?.leagueID) ")
+        let leagueDetails = self.storyboard?.instantiateViewController(withIdentifier: "leagueDetailsViewController") as! LeagueDetailsViewController
+        leagueDetails.league = leaguesArray?[indexPath.row]
+        self.present(leagueDetails, animated: true, completion: nil)
         
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "leagueCell", for: indexPath) as! LeaguesTableViewCell
         if (leaguesArray?.count) != nil{
@@ -94,6 +98,7 @@ ControllerContract {
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Available Leagues"
     }
+
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
