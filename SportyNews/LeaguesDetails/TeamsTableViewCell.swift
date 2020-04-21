@@ -35,19 +35,31 @@ class TeamsTableViewCell: UITableViewCell ,UICollectionViewDelegate, UICollectio
       //  return 0
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("3aaaaaaaaaaaa")
+        print(teamsArray[indexPath.row].teamName)
+        print(teamsArray[indexPath.row].teamCountry)
+        print(teamsArray[indexPath.row].teamSport)
+        print(teamsArray[indexPath.row].teamBadge)
+        
+       // let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+       // let teamViewController = mainStoryBoard.instantiateViewController(withIdentifier: "teamDetailsViewController") as! TeamDetailsViewController
+        //teamViewController.teamDetails = teamsArray[indexPath.row]
+       // self.present(teamViewController, animated: true, completion: nil)
+        
+        //Using Notification Center to send data
+        let nc = NotificationCenter.default
+        nc.post(name: Notification.Name(rawValue: "callTeamDetails"), object: teamsArray[indexPath.row], userInfo: nil)
+        
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
             return 1
-        }
+    }
         
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             return CGSize(width: 80, height: 80)
         }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell : TeamsCollectionCell = teamsCollectionView.dequeueReusableCell(withReuseIdentifier: "teamsCollectionCell", for: indexPath) as! TeamsCollectionCell
-        
-        print("\n\n\n\n\n\n\n***************************\(teamsArray[indexPath.row].teamBadge)")
         cell.teamImageView.kf.setImage(with: URL(string: (teamsArray[indexPath.row].teamBadge)!))
         return cell
         }

@@ -19,23 +19,23 @@ class TeamDetailsViewController: UIViewController {
     
     @IBOutlet var teamSport: UILabel!
     @IBOutlet var teamCountry: UILabel!
-    public var TeamDetails:TeamEntity?
+    public var teamDetails:TeamEntity?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "background.jpeg")!)
-        TeamDetails = TeamEntity()
+       /*TeamDetails = TeamEntity()
         TeamDetails?.teamName = "Flamurtari Vlorë"
         TeamDetails?.teamSport = "Soccer"
         TeamDetails?.teamCountry = "Albania"
-        TeamDetails?.teamBadge = "https://www.thesportsdb.com//images//media//team//badge//pvxcv21513620873.png"
-       /* tetDatBase*/
+        TeamDetails?.teamBadge = "https://www.thesportsdb.com//images//media//team//badge//pvxcv21513620873.png"*/
+       /* tetDatBase
         let league = LeagueEntity()
         league.leagueName = "akkk"
         league.leagueBadge = "http://fkgjlfj"
         league.leagueVideoLink = "jdkljglkf"
         league.leagueID = "999999"
-        CoreDataHandler.getCoreHandlerInstance().deleteFromEntity(league: league)
+        CoreDataHandler.getCoreHandlerInstance().deleteFromEntity(league: league)*/
         
         
         
@@ -45,16 +45,16 @@ class TeamDetailsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
-        if(TeamDetails != nil){
-            teamName.text = TeamDetails?.teamName
-            teamCountry.text = TeamDetails?.teamCountry
-            teamSport.text = TeamDetails?.teamSport
-            let imageUrl = URL(string:(TeamDetails?.teamBadge)!)
+        if(teamDetails != nil){
+            teamName.text = teamDetails?.teamName
+            teamCountry.text = teamDetails?.teamCountry
+            teamSport.text = teamDetails?.teamSport
+            let imageUrl = URL(string:(teamDetails?.teamBadge)!)
             teamPoster.kf.setImage(with: imageUrl)
 
     }
         /*testDatabase*/
-        var favorit = Array<LeagueEntity>()
+        /*var favorit = Array<LeagueEntity>()
         favorit = CoreDataHandler.getCoreHandlerInstance().getFavouriteLeague()
         print(favorit.count)
         if(favorit.count != 0){
@@ -65,7 +65,7 @@ class TeamDetailsViewController: UIViewController {
             print(item.leagueVideoLink!)
             
         }
-        }
+        }*/
         
 
         /*testDatabase*/

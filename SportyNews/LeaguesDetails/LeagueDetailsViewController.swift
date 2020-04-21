@@ -8,8 +8,10 @@
 
 import UIKit
 
-class LeagueDetailsViewController: UIViewController, UITableViewDelegate,UITableViewDataSource, LeaguesDetailsControllerContract {
+class LeagueDetailsViewController: UIViewController, UITableViewDelegate,UITableViewDataSource, UINavigationBarDelegate, LeaguesDetailsControllerContract {
+    @IBOutlet weak var navigationbar: UINavigationBar!
     
+    @IBOutlet weak var navigationBarItem: UINavigationItem!
     var league : LeagueEntity?
     var teamsList = Array<TeamEntity>()
     
@@ -108,6 +110,8 @@ class LeagueDetailsViewController: UIViewController, UITableViewDelegate,UITable
                 break
             case 2:
                 cell  = (self.tableView.dequeueReusableCell(withIdentifier: "teamsCell") as! TeamsTableViewCell)
+                let nc = NotificationCenter.default
+                nc.addObserver(self, selector: #selector(toTeamDetailsPage), name: NSNotification.Name(rawValue: "callTeamDetails"), object: nil)
                 if(teamsList.count != 0){
                     print("*****************\n\nteam list is availabl")
                 }
@@ -119,6 +123,21 @@ class LeagueDetailsViewController: UIViewController, UITableViewDelegate,UITable
         return cell!
     }
 
+    @objc func toTeamDetailsPage(notification: Notification){
+        if let teamsObject = notification.object as? TeamEntity{
+            print("heree")
+            let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+             let teamViewController = mainStoryBoard.instantiateViewController(withIdentifier: "teamDetailsViewController") as! TeamDetailsViewController
+            teamViewController.teamDetails = teamsObject
+             self.present(teamViewController, animated: true, completion: nil)
+        }
+        else {return}
+        print("heree")
+        let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+         let teamViewController = mainStoryBoard.instantiateViewController(withIdentifier: "teamDetailsViewController") as! TeamDetailsViewController
+         self.present(teamViewController, animated: true, completion: nil)
+        
+    }
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         
         if(indexPath.row == 0 && indexPath.section==2){
@@ -128,14 +147,24 @@ class LeagueDetailsViewController: UIViewController, UITableViewDelegate,UITable
              (cell as! TeamsTableViewCell).teamsCollectionView.reloadData()
         }
     }
-
+    func position(for bar: UIBarPositioning) -> UIBarPosition {
+        return UIBarPosition.topAttached
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter.controller = self
+        self.navigationBarItem.title = "Sporty News"
+        self.navigationbar.delegate = self
+        let backbutton = UIButton(type: .custom)
+        backbutton.setImage(UIImage(named: "BackButton.png"), for: .normal)
+        backbutton.setTitle("Back", for: .normal)
+        backbutton.setTitleColor(backbutton.tintColor, for: .normal)
+        backbutton.addTarget(self, action: #selector(returnToLeagues), for: .touchUpInside)
         leagueNameLabel.text = league?.leagueName
-        // Do any additional setup after loading the view.
+        //self.navigationBarItem.leftBarButtonItem = UIBarButtonItem(customView: backbutton)
         presenter.getAllNeededData(forLeague: league!)
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: UIBarButtonItemStyle.done, target: self, action: #selector(returnToLeagues))
+        self.navigationBarItem.leftBarButtonItem = UIBarButtonItem(title: "<< Leagues", style: UIBarButtonItemStyle.done, target: self, action: #selector(returnToLeagues))
     }
 
     @objc func returnToLeagues(){
