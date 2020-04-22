@@ -9,9 +9,9 @@
 import Foundation
 import CoreData
 import UIKit
-class CoreDataHandler{
+class CoreDataHandler {
     private let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    private  var managedContext:NSManagedObjectContext?
+    private var managedContext:NSManagedObjectContext?
     private static var instance = CoreDataHandler()
     
     private init () {
@@ -20,91 +20,108 @@ class CoreDataHandler{
     
     static func getCoreHandlerInstance() -> CoreDataHandler {
         return instance
-}
-    func insertLeague(league leagueValue:LeagueEntity) -> NSManagedObject {
+    }
+    
+    
+    func insertInLocalLeagues(league LeagueValue:LeagueEntity)  -> LeagueEntity {
         let entity = NSEntityDescription.entity(forEntityName: "FavouriteLeague", in: managedContext!)
+        var leagueNSManagedObject = NSManagedObject(entity: entity!, insertInto: managedContext!)
         
-        let league = prepareNSManagedObject(leagueValue: leagueValue, entity: entity!)
+        leagueNSManagedObject = prepareNSManagedObject(leagueValue: LeagueValue, leagueNSManagedObject: leagueNSManagedObject)
         
         do{
             try managedContext!.save()
         }
         catch{
-            print("error in insertInLocalMovies")
+            print("error in insertInLocalLeagues")
         }
+        return LeagueValue
+    }
+    
+    
+    func getFavouriteLeagues() -> [LeagueEntity] {
+        return fetchData()
+    }
+    
+    
+    
+    private func fetchData() -> [LeagueEntity]{
+        
+        var leagues = [LeagueEntity]()
+        var leaguesNSManagedOBjects = Array<NSManagedObject>()
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "FavouriteLeague")
+        
+        do{
+            leaguesNSManagedOBjects = try managedContext!.fetch(fetchRequest)
+            
+            leaguesNSManagedOBjects.forEach({(object) in
+                leagues.append(prepareLeagueObject(leagueNSManagedObject: object))
+            })
+        }
+        catch{
+            print("error in fetchData")
+        }
+        return leagues
+    }
+    
+    private func prepareNSManagedObject(leagueValue:LeagueEntity,leagueNSManagedObject : NSManagedObject) -> NSManagedObject{
+        
+        leagueNSManagedObject.setValue(leagueValue.leagueID, forKey: "leagueID")
+        leagueNSManagedObject.setValue(leagueValue.leagueName, forKey: "leagueName")
+        leagueNSManagedObject.setValue(leagueValue.leagueBadge, forKey: "leagueThump")
+        leagueNSManagedObject.setValue(leagueValue.leagueVideoLink, forKey: "leagueYoutube")
+        
+        return leagueNSManagedObject
+    }
+    
+    private func prepareLeagueObject(leagueNSManagedObject : NSManagedObject) -> LeagueEntity{
+        
+        let league = LeagueEntity()
+        league.leagueID = leagueNSManagedObject.value(forKey: "leagueID") as? String
+        league.leagueName = leagueNSManagedObject.value(forKey: "leagueName") as? String
+        league.leagueBadge = leagueNSManagedObject.value(forKey: "leagueThump") as? String
+        league.leagueVideoLink = leagueNSManagedObject.value(forKey: "leagueYoutube") as? String
+
         return league
     }
-
-    
-    func getFavouriteLeague() -> Array<LeagueEntity>{
-        return fetchData(entityName: "FavouriteLeague")
-    }
     
     
-
-    func deleteFromEntity(league leagueValue:LeagueEntity){
-        let entity = NSEntityDescription.entity(forEntityName: "FavouriteLeague", in: managedContext!)
+    func deleteFromEntity(id : String){
         
-        let deletedLeague = prepareNSManagedObjectDeletion(leagueValue: leagueValue, entity: entity!)
-
-        managedContext?.delete(deletedLeague)
+        let leagueNSManagedObject = fetchLeagueById(id: id)
+        
+        if(leagueNSManagedObject == nil){
+            return
+        }
+        managedContext?.delete(leagueNSManagedObject!)
+        
         do{
-            try managedContext?.save()
+            try managedContext!.save()
         }
         catch{
             print("error in deleteFromEntity")
         }
     }
     
-    private func fetchData(entityName:String) -> Array<LeagueEntity>{
-        var leaguesArray = Array<LeagueEntity>()
-        var leagues = Array<NSManagedObject>()
+    func fetchLeagueById(id :String) -> NSManagedObject?{
+        var leaguesNSManagedOBjects = Array<NSManagedObject>()
         
-        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: entityName)
+        let predicate = NSPredicate(format: "leagueID == %@",id)
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "FavouriteLeague")
+        
+        fetchRequest.predicate = predicate
         
         do{
-            leagues = try managedContext!.fetch(fetchRequest)
+            leaguesNSManagedOBjects = try managedContext!.fetch(fetchRequest)
         }
         catch{
             print("error in fetchData")
         }
-        for item in leagues {
-           let leageName = item.value(forKey: "leagueName") as! String
-            let leageThmap = item.value(forKey: "leagueThump") as! String
-            let leageYoutube = item.value(forKey: "leagueYoutube") as! String
-            let leagueId = item.value(forKey: "leagueID") as! String
-            let  league = LeagueEntity()
-            league.leagueName = leageName
-            league.leagueBadge = leageThmap
-            league.leagueVideoLink = leageYoutube
-            league.leagueID = leagueId
-            leaguesArray.append(league)
+        if(leaguesNSManagedOBjects.count > 0 ){
+            return leaguesNSManagedOBjects[0]
         }
-        
-        
-        
-        return leaguesArray
-    }
-    
-    private func prepareNSManagedObject(leagueValue:LeagueEntity,entity :NSEntityDescription) -> NSManagedObject{
-        
-        let league = NSManagedObject(entity: entity, insertInto: managedContext!)
-        league.setValue(leagueValue.leagueName, forKey: "leagueName")
-        league.setValue(leagueValue.leagueBadge, forKey: "leagueThump")
-        league.setValue(leagueValue.leagueVideoLink, forKey: "leagueYoutube")
-        league.setValue(leagueValue.leagueID, forKey: "leagueID")
-        
-        return league
-    }
-    
-    private func prepareNSManagedObjectDeletion(leagueValue:LeagueEntity,entity :NSEntityDescription) -> NSManagedObject{
-        
-        let league = NSManagedObject(entity: entity, insertInto: nil)
-        league.setValue(leagueValue.leagueName, forKey: "leagueName")
-        league.setValue(leagueValue.leagueBadge, forKey: "leagueThump")
-        league.setValue(leagueValue.leagueVideoLink, forKey: "leagueYoutube")
-        league.setValue(leagueValue.leagueID, forKey: "leagueID")
-        return league
+        return  nil
     }
     
 }

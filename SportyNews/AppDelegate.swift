@@ -13,10 +13,37 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    var tabBarController : UITabBarController?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //Add View Controllers to TabBarController and make it customize
+        let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+        tabBarController = mainStoryBoard.instantiateViewController(withIdentifier: "tabBarController") as? UITabBarController
+
+        let leagueStoryBoard = UIStoryboard(name: "LeaguesStoryboard", bundle: nil)
+        var arr = [UIViewController]()
+        let sportViewController = (tabBarController?.viewControllers?[0])!
+        sportViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .mostViewed, tag: 0)
+        sportViewController.title = "Sports"
+        arr.append(sportViewController)
+        
+        let leaguesViewController = leagueStoryBoard.instantiateViewController(withIdentifier: "leaguesTableViewController") as! LeaguesTableViewController
+        
+        leaguesViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
+        leaguesViewController.title = "Favourite Leagues"
+        arr.append(leaguesViewController)
+        
+    
+        
+       // tabBarController.addChildViewController(leaguesViewController)
+        tabBarController?.setViewControllers(arr, animated: true)
+        
+        //setting Tab bar controller
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = UINavigationController(rootViewController: tabBarController!)
+        window?.makeKeyAndVisible()
         return true
     }
 

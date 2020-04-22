@@ -15,6 +15,7 @@ class SportViewController: UIViewController ,SportsViewProtocol,UICollectionView
     var sportsList:Array<SportEntity>?
     var sportPersenter:SportsPersenter?
     
+    
     @IBOutlet var collectionView: UICollectionView!
     func showSports(sports: Array<SportEntity>) {
         sportsList = sports
@@ -23,14 +24,13 @@ class SportViewController: UIViewController ,SportsViewProtocol,UICollectionView
         
     }
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         sportsList = Array<SportEntity>()
         sportPersenter = SportsPersenter(sportsview: self)
         sportPersenter?.getSports()
-     
-
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -124,7 +124,10 @@ class SportViewController: UIViewController ,SportsViewProtocol,UICollectionView
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
         print("\(sportsList![indexPath.row].sportName)")
         let leagueStoryBoard = UIStoryboard(name: "LeaguesStoryboard", bundle: nil)
-        let leagueViewController = leagueStoryBoard.instantiateViewController(withIdentifier: "leaguesTableViewController") as! LeaguesTableViewController
+        let leagueViewController = leagueStoryBoard.instantiateViewController(withIdentifier:
+            "leaguesTableViewController") as! LeaguesTableViewController
+        
+        leagueViewController.isFavouriteTab = false
         leagueViewController.sportName = sportsList?[indexPath.row].sportName
         self.navigationController?.pushViewController(leagueViewController, animated: true)
         return true

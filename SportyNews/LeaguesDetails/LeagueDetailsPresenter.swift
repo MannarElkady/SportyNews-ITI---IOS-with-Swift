@@ -9,10 +9,16 @@
 import Foundation
 
 class LeagueDetailsPresenter : LeaguesDetailsPresenterContract{
+    func addLeagueToLogal(League league: LeagueEntity) {
+        CoreDataHandler.getCoreHandlerInstance().insertInLocalLeagues(league: league)
+        self.controller?.updateFavourite()
+        
+    }
+    
     var controller : LeaguesDetailsControllerContract?
     func getUpComingEvents(withID id: String) {
-        APIURLs.searchEventsWithLeagueIDKey = id
-        NetworkService.INSTANCE.getResponse(withURL: URL(string: "\(APIURLs.pastEventSearchLeagueString)\(APIURLs.searchEventsWithLeagueIDKey!)")!, ProcessResult: {
+        APIURLs.searchEventsKey = id
+        NetworkService.INSTANCE.getResponse(withURL: URL(string: "\(APIURLs.latestPastEventsPerLeagueURLString)\(APIURLs.searchEventsKey!)")!, ProcessResult: {
             json in
             //print(json)
             let upComingEvents = Mapper.jsonToEventList(fromJson: json)
@@ -32,26 +38,17 @@ class LeagueDetailsPresenter : LeaguesDetailsPresenterContract{
     }
     
     func getPastEvents(withID id: String) {
-        APIURLs.searchEventsWithLeagueIDKey = id
-        NetworkService.INSTANCE.getResponse(withURL: URL(string: "\(APIURLs.pastEventSearchLeagueString)\(APIURLs.searchEventsWithLeagueIDKey!)")!, ProcessResult: {
+        APIURLs.searchEventsKey = id
+        NetworkService.INSTANCE.getResponse(withURL: URL(string: "\(APIURLs.latestPastEventsPerLeagueURLString)\(APIURLs.searchEventsKey!)")!, ProcessResult: {
             json in
-            //print(json)
             let pastEvents = Mapper.jsonToEventList(fromJson: json)
-                /*pastEvents.forEach({
-                event in
-                print(event.eventName!)
-                print(event.eventTime!)
-                print(event.eventDate!)
-                print(event.firstTeam?.teamName!)
-                print(event.firstTeamScore!)
-            })*/
             self.controller?.displayPastEvents(listOfPastEvents: pastEvents)
             })
     }
     
     func getTeams(withName name: String) {
         APIURLs.searchTeamKey = name.split(separator: " ").joined(separator: "%20")
-        NetworkService.INSTANCE.getResponse(withURL: URL(string: "\(APIURLs.teamSearchLeagueString)\(APIURLs.searchTeamKey!)")!, ProcessResult: {
+        NetworkService.INSTANCE.getResponse(withURL: URL(string: "\(APIURLs.allTeamsPerLeagueURLString)\(APIURLs.searchTeamKey!)")!, ProcessResult: {
             json in
                // print(json)
             let teams = Mapper.jsonToTeamList(fromJson: json)

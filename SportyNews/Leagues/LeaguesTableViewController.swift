@@ -16,6 +16,7 @@ ControllerContract {
     
     @IBOutlet weak var sportNameTextField: UILabel!
     var sportName: String?
+    var isFavouriteTab = true
     
     var leaguesArray: Array<LeagueEntity>?
     
@@ -24,7 +25,6 @@ ControllerContract {
     func displayLeagues(LeaguesArray array: Array<LeagueEntity>) {
         leaguesArray?.removeAll()
         leaguesArray = array
-        
         leaguesArray?.forEach({ league in
             print("\n*******************\(league.leagueName)")
         })
@@ -37,16 +37,16 @@ ControllerContract {
         super.viewDidLoad()
         presenterLeague.controller = self
         self.sportNameTextField?.text = sportName
-      //  print("\n\n FromViewDidLoadLeagusWIthSport: \(sportName)")
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        if let name = sportName {
-            presenterLeague.getLeague(sportName: sportName!)
-        }
+        
+        
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        print("\n\n\n\n\n\n***")
+        presenterLeague.getLeagues()
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -76,7 +76,6 @@ ControllerContract {
         let leagueDetails = self.storyboard?.instantiateViewController(withIdentifier: "leagueDetailsViewController") as! LeagueDetailsViewController
         leagueDetails.league = leaguesArray?[indexPath.row]
         self.present(leagueDetails, animated: true, completion: nil)
-        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

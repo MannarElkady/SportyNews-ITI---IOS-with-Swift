@@ -120,7 +120,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="cvc-58-Pun">
-                                <rect key="frame" x="0.0" y="126" width="375" height="541"/>
+                                <rect key="frame" x="0.0" y="170" width="375" height="497"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" tag="5" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="upComingCell" rowHeight="175" id="GeF-Ly-fz0" customClass="UpcomingTableViewCell" customModule="SportyNews" customModuleProvider="target">
@@ -248,7 +248,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gSa-27-FcM">
-                                <rect key="frame" x="309" y="68" width="50" height="50"/>
+                                <rect key="frame" x="309" y="112" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="STl-VQ-J78"/>
                                     <constraint firstAttribute="height" constant="50" id="efP-bf-0hT"/>
@@ -263,13 +263,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anaaaaaa" textAlignment="natural" lineBreakMode="characterWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WGD-O1-Or0">
-                                <rect key="frame" x="8" y="68" width="285" height="29"/>
+                                <rect key="frame" x="8" y="112" width="285" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U2p-NR-gbL">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                                 <items>
                                     <navigationItem title="Title" id="aPb-o0-ghG" userLabel="barItem"/>
                                 </items>
@@ -302,6 +302,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="l1v-Lh-SfC"/>
                     <connections>
+                        <outlet property="favouriteButtonOutlet" destination="gSa-27-FcM" id="8a2-bD-YlD"/>
                         <outlet property="leagueNameLabel" destination="WGD-O1-Or0" id="fqb-ac-euh"/>
                         <outlet property="navigationBarItem" destination="aPb-o0-ghG" id="nCU-g1-GhC"/>
                         <outlet property="navigationbar" destination="U2p-NR-gbL" id="JvT-G3-hTf"/>
@@ -310,24 +311,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yev-E7-7xP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1964" y="-77.811094452773617"/>
+            <point key="canvasLocation" x="1927" y="-77"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="eK5-wa-tjI">
+        <scene sceneID="eA1-tq-8jg">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="w52-4u-SPo" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="N9K-3m-BIp" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="myA-xZ-tb2">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="maU-lj-Sab">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Frt-oO-nT7" kind="relationship" relationship="rootViewController" id="F0Q-hD-9UU"/>
+                        <segue destination="Frt-oO-nT7" kind="relationship" relationship="rootViewController" id="UZf-NR-HMn"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ys6-c9-5gR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GPV-ZM-dy8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1024.8" y="-77.811094452773617"/>
+            <point key="canvasLocation" x="980" y="-77"/>
         </scene>
     </scenes>
     <resources>

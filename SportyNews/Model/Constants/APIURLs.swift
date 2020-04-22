@@ -9,28 +9,22 @@
 import Foundation
 
 class APIURLs {
+    
+    
     /****** Strings URL******/
-    static let sportString = "https://www.thesportsdb.com/api/v1/json/1/all_sports.php"
-    static let leagueSearchString = "https://www.thesportsdb.com/api/v1/json/1/search_all_leagues.php?s="
-    static let teamSearchLeagueString = "https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l="
-    static let upcomingEventSearchLeagueString = "https://www.thesportsdb.com/api/v1/json/1/eventsnextleague.php?id="
-    static let pastEventSearchLeagueString = "https://www.thesportsdb.com/api/v1/json/1/eventspastleague.php?id="
+    static let allSportsURLString = "https://www.thesportsdb.com/api/v1/json/1/all_sports.php"
+    static let allLeaguesForSportURLString = "https://www.thesportsdb.com/api/v1/json/1/search_all_leagues.php?s="
+    static let allTeamsPerLeagueURLString = "https://www.thesportsdb.com/api/v1/json/1/search_all_teams.php?l="
+    static let latestUpComingEventsPerLeagueURLString = "https://www.thesportsdb.com/api/v1/json/1/eventsnextleague.php?id="
+    static let latestPastEventsPerLeagueURLString = "https://www.thesportsdb.com/api/v1/json/1/eventspastleague.php?id="
     
     /**Keys**/
     static var searchLeagueKey : String?
     static var searchTeamKey : String?
-    static var searchEventsWithLeagueIDKey : String?
+    static var searchEventsKey : String?
     
     /****** URLs******/
-    static let sportsURL : URL = URL(string: sportString)!
-    
-    static var searchUpcomingEventWithLeagueIDURL : URL =  URL(string: "\(upcomingEventSearchLeagueString)\(searchEventsWithLeagueIDKey!)")!
-    
-    static var searchPastEventWithLeagueIDURL : URL =  URL(string: "\(pastEventSearchLeagueString)\(searchEventsWithLeagueIDKey!)")!
-    
-    //static var searchLeagueWithSportNameURL : URL = URL(string: "\(leagueSearchString)\(searchLeagueKey!)")!
-    
-    static var searchTeamLeagueURL : URL = URL(string: "\(teamSearchLeagueString)\(searchTeamKey!)")!
+    static let sportsURL : URL = URL(string: allSportsURLString)!
     
 }
 

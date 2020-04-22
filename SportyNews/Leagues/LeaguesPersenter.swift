@@ -9,16 +9,39 @@
 import Foundation
 
 class LeaguePresenter : PresenterContract{
+    func getLeagues() {
+        if((!(self.controller as! LeaguesTableViewController).isFavouriteTab)){
+            getLeagueFromNetwork()
+            (self.controller as! LeaguesTableViewController).isFavouriteTab = true
+        }
+        else {
+            getFavouriteLeagues()
+            
+        }
+    }
+    
     var controller : ControllerContract?
-    func getLeague(sportName name: String) {
-        APIURLs.searchLeagueKey = name.split(separator: " ").joined(separator: "%20")
-        print(name.split(separator: " ").joined(separator: "%20"))
-        NetworkService.INSTANCE.getResponse(withURL:URL(string: "\(APIURLs.leagueSearchString)\(APIURLs.searchLeagueKey!)")!, ProcessResult: {
+    
+    func getLeagueFromNetwork() {
+        APIURLs.searchLeagueKey = self.controller?.sportName?.split(separator: " ").joined(separator: "%20")
+        //print(name.split(separator: " ").joined(separator: "%20"))
+        NetworkService.INSTANCE.getResponse(withURL:URL(string: "\(APIURLs.allLeaguesForSportURLString)\(APIURLs.searchLeagueKey!)")!, ProcessResult: {
             json in
             
             let leagueArray = Mapper.jsonToLeaguesList(fromJson: json)
             self.controller?.displayLeagues(LeaguesArray: leagueArray as! Array<LeagueEntity>)
             }
         )
+    }
+    
+    func getFavouriteLeagues() {
+        DispatchQueue.global(qos: DispatchQoS.QoSClass.userInteractive).async{
+            let faveLeagues = CoreDataHandler.getCoreHandlerInstance().getFavouriteLeagues()
+            
+            DispatchQueue.main.async {
+                self.controller?.displayLeagues(LeaguesArray: faveLeagues)
+            }
+    }
+    
     }
 }

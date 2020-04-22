@@ -35,11 +35,6 @@ class TeamsTableViewCell: UITableViewCell ,UICollectionViewDelegate, UICollectio
       //  return 0
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(teamsArray[indexPath.row].teamName)
-        print(teamsArray[indexPath.row].teamCountry)
-        print(teamsArray[indexPath.row].teamSport)
-        print(teamsArray[indexPath.row].teamBadge)
-        
        // let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
        // let teamViewController = mainStoryBoard.instantiateViewController(withIdentifier: "teamDetailsViewController") as! TeamDetailsViewController
         //teamViewController.teamDetails = teamsArray[indexPath.row]

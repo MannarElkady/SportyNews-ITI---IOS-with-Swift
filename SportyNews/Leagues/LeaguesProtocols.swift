@@ -10,7 +10,9 @@ import Foundation
 
 
 protocol PresenterContract {
-    func getLeague(sportName name: String)
+    func getLeagues()
+    func getLeagueFromNetwork()
+    func getFavouriteLeagues()
 }
 
 protocol ControllerContract {
