@@ -430,10 +430,10 @@
             filePath = "SportyNews/Leagues/LeaguesPersenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "getLeagueFromNetwork()"
-            landmarkType = "7">
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "LeaguePresenter"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "04ACC53F-B7F9-42AB-A123-1F883C600500 - 1d93b9c76e8df015"
@@ -478,8 +478,8 @@
             filePath = "SportyNews/Sports/SportViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
             landmarkName = "SportViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -494,8 +494,8 @@
             filePath = "SportyNews/Sports/SportViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
             landmarkName = "SportViewController"
             landmarkType = "3">
          </BreakpointContent>
@@ -510,8 +510,8 @@
             filePath = "SportyNews/Leagues/LeaguesPersenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "getLeagueFromNetwork()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1064,7 +1064,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "55"
             endingLineNumber = "55"
-            landmarkName = "getTeams(withName:)"
+            landmarkName = "getPastEvents(withID:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -1112,7 +1112,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "57"
             endingLineNumber = "57"
-            landmarkName = "getTeams(withName:)"
+            landmarkName = "getPastEvents(withID:)"
             landmarkType = "7">
             <Locations>
                <Location
@@ -1416,7 +1416,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "13"
             endingLineNumber = "13"
-            landmarkName = "getLeagues()"
+            landmarkName = "checkAvailability()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1432,7 +1432,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "14"
             endingLineNumber = "14"
-            landmarkName = "getLeagues()"
+            landmarkName = "checkAvailability()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1446,8 +1446,8 @@
             filePath = "SportyNews/Leagues/LeaguesPersenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "17"
-            endingLineNumber = "17"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
             landmarkName = "getLeagues()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1462,10 +1462,10 @@
             filePath = "SportyNews/Leagues/LeaguesPersenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "getLeagueFromNetwork()"
-            landmarkType = "7">
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "LeaguePresenter"
+            landmarkType = "3">
             <Locations>
                <Location
                   uuid = "1BEC0D66-676D-4A66-BF2E-3CFA14CABC2A - aa3243cf1ddee6d7"
@@ -1510,8 +1510,8 @@
             filePath = "SportyNews/Sports/SportViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
             landmarkName = "collectionView(_:shouldSelectItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1526,8 +1526,8 @@
             filePath = "SportyNews/Leagues/LeaguesPersenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
             landmarkName = "getLeagues()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1592,7 +1592,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "56"
             endingLineNumber = "56"
-            landmarkName = "getTeams(withName:)"
+            landmarkName = "getPastEvents(withID:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

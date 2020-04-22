@@ -8,7 +8,11 @@
 
 import Foundation
 
-class LeagueDetailsPresenter : LeaguesDetailsPresenterContract{
+class LeagueDetailsPresenter : LeaguesDetailsPresenterContract , AvaialbilityProtocol{
+        func checkAvailability() -> Bool {
+            return Reachability.Connection()
+        }
+
     func deleteFromLocal(League league: LeagueEntity) {
         if let id = league.leagueID {
         CoreDataHandler.getCoreHandlerInstance().deleteFromEntity(id: id)
@@ -33,37 +37,37 @@ class LeagueDetailsPresenter : LeaguesDetailsPresenterContract{
     
     var controller : LeaguesDetailsControllerContract?
     func getUpComingEvents(withID id: String) {
+        if(checkAvailability()){
         APIURLs.searchEventsKey = id
         NetworkService.INSTANCE.getResponse(withURL: URL(string: "\(APIURLs.latestPastEventsPerLeagueURLString)\(APIURLs.searchEventsKey!)")!, ProcessResult: {
             json in
             let upComingEvents = Mapper.jsonToEventList(fromJson: json)
             self.controller?.displayUpcomingEvents(listOfUpcomingEvents: upComingEvents)
+        })
         }
-            
-            )
     }
     
     func getPastEvents(withID id: String) {
+        if(checkAvailability()){
         APIURLs.searchEventsKey = id
         NetworkService.INSTANCE.getResponse(withURL: URL(string: "\(APIURLs.latestPastEventsPerLeagueURLString)\(APIURLs.searchEventsKey!)")!, ProcessResult: {
             json in
             let pastEvents = Mapper.jsonToEventList(fromJson: json)
             self.controller?.displayPastEvents(listOfPastEvents: pastEvents)
             })
+        }
     }
     
     func getTeams(withName name: String) {
+        if(checkAvailability()){
         APIURLs.searchTeamKey = name.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         NetworkService.INSTANCE.getResponse(withURL: URL(string: "\(APIURLs.allTeamsPerLeagueURLString)\(APIURLs.searchTeamKey!)")!, ProcessResult: {
             json in
                // print(json)
             let teams = Mapper.jsonToTeamList(fromJson: json)
-                teams.forEach({
-                team in
-                    print("\n\n***\(String(describing: team.teamName)) \(String(describing: team.teamBadge))")
-            })
             self.controller?.displayTeams(listOfTeams: teams)
         })
+        }
     }
     
     func getAllNeededData(forLeague league: LeagueEntity) {

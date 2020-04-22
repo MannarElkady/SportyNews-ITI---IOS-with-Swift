@@ -25,10 +25,6 @@ ControllerContract {
     func displayLeagues(LeaguesArray array: Array<LeagueEntity>) {
         leaguesArray?.removeAll()
         leaguesArray = array
-        leaguesArray?.forEach({ league in
-            print("\n*******************\(league.leagueName)")
-        })
-        print(leaguesArray?.count)
         tableView.reloadData()
     }
     
@@ -74,10 +70,23 @@ ControllerContract {
         return 110
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if(self.presenterLeague.checkAvailability()){
         print("Select item: \((leaguesArray?[indexPath.row])?.leagueID) ")
         let leagueDetails = self.storyboard?.instantiateViewController(withIdentifier: "leagueDetailsViewController") as! LeagueDetailsViewController
         leagueDetails.league = leaguesArray?[indexPath.row]
         self.present(leagueDetails, animated: true, completion: nil)
+        }
+        else{
+            showAlert(Message: "Internet is NOT Available", Details: "Please Connect To Internet to Continue")
+        }
+    }
+    
+    func showAlert(Message message : String, Details details : String){
+        let alert = UIAlertController(title: message, message: details, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Okay", style: .cancel, handler: nil))
+        
+        self.present(alert, animated: true)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

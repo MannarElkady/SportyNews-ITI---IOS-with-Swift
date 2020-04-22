@@ -8,15 +8,21 @@
 
 import Foundation
 
-class LeaguePresenter : PresenterContract{
+class LeaguePresenter : PresenterContract, AvaialbilityProtocol{
+    func checkAvailability() -> Bool {
+        return Reachability.Connection()
+    }
+    
     func getLeagues() {
-        if((!(self.controller as! LeaguesTableViewController).isFavouriteTab)){
-            getLeagueFromNetwork()
-            (self.controller as! LeaguesTableViewController).isFavouriteTab = true
-        }
-        else {
-            getFavouriteLeagues()
-            
+        if(checkAvailability()){
+            if((!(self.controller as! LeaguesTableViewController).isFavouriteTab)){
+                getLeagueFromNetwork()
+                (self.controller as! LeaguesTableViewController).isFavouriteTab = true
+            }
+            else {
+                getFavouriteLeagues()
+                
+            }
         }
     }
     

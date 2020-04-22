@@ -7,7 +7,11 @@
 //
 
 import Foundation
-class SportsPersenter:SportPresenterProtocol{
+class SportsPersenter:SportPresenterProtocol, AvaialbilityProtocol{
+    func checkAvailability() -> Bool {
+        return Reachability.Connection()
+    }
+
     let sportsview:SportsViewProtocol
     
     init(sportsview:SportsViewProtocol) {
@@ -15,13 +19,15 @@ class SportsPersenter:SportPresenterProtocol{
     }
     
     func getSports() {
-        NetworkService.INSTANCE.getResponse(withURL: APIURLs.sportsURL,  ProcessResult: {
-            json in let sportArray = Mapper.jsonToSportsList(fromJson: json)
-            sportArray.forEach({
-                sport in
-                print("SportName: \(sport.sportName)")
+        if(checkAvailability()){
+            NetworkService.INSTANCE.getResponse(withURL: APIURLs.sportsURL,  ProcessResult: {
+                json in let sportArray = Mapper.jsonToSportsList(fromJson: json)
+                sportArray.forEach({
+                    sport in
+                    print("SportName: \(sport.sportName)")
+                })
+                self.sportsview.showSports(sports: sportArray)
             })
-            self.sportsview.showSports(sports: sportArray)
-        })
+        }
     }
 }

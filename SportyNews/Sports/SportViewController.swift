@@ -33,10 +33,9 @@ class SportViewController: UIViewController ,SportsViewProtocol,UICollectionView
     
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let yourWidth = collectionView.bounds.width/2.0
-        let yourHeight = yourWidth
-    
-        return CGSize(width: yourWidth, height: yourHeight)
+        let width = collectionView.bounds.width/2.0
+        let height = width
+        return CGSize(width: width, height: height)
     }
     
     override func viewDidLoad() {

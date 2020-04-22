@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2EDEFB5A3B9F4D1DE718B177 /* Pods_SportyNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C542F5BBB948998C4D360412 /* Pods_SportyNews.framework */; };
+		AE5051702450D47800D83DDD /* AvailabilityProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE50516F2450D47800D83DDD /* AvailabilityProtocol.swift */; };
 		BA212DA1244B40A8008AD849 /* SpotrsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA212DA0244B40A8008AD849 /* SpotrsProtocols.swift */; };
 		BA212DA3244B40DB008AD849 /* LeaguesProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA212DA2244B40DB008AD849 /* LeaguesProtocols.swift */; };
 		BA212DA5244B411E008AD849 /* TeamsProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA212DA4244B411E008AD849 /* TeamsProtocols.swift */; };
@@ -59,6 +60,7 @@
 /* Begin PBXFileReference section */
 		3592A2C2D6D53E5B3AD553EB /* Pods-SportyNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportyNews.debug.xcconfig"; path = "Target Support Files/Pods-SportyNews/Pods-SportyNews.debug.xcconfig"; sourceTree = "<group>"; };
 		541C17E7FB5F9D5E153A2F96 /* Pods-SportyNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SportyNews.release.xcconfig"; path = "Target Support Files/Pods-SportyNews/Pods-SportyNews.release.xcconfig"; sourceTree = "<group>"; };
+		AE50516F2450D47800D83DDD /* AvailabilityProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailabilityProtocol.swift; sourceTree = "<group>"; };
 		BA212DA0244B40A8008AD849 /* SpotrsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpotrsProtocols.swift; sourceTree = "<group>"; };
 		BA212DA2244B40DB008AD849 /* LeaguesProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaguesProtocols.swift; sourceTree = "<group>"; };
 		BA212DA4244B411E008AD849 /* TeamsProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsProtocols.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				BAFCF05D244DB4C900479BE8 /* Reachability.swift */,
+				AE50516F2450D47800D83DDD /* AvailabilityProtocol.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -454,6 +457,7 @@
 				BAFCF05E244DB4C900479BE8 /* Reachability.swift in Sources */,
 				BA5B0CD4244A110C00E62F86 /* AppDelegate.swift in Sources */,
 				BA789B75244B2F6F00D17ED0 /* NetworkService.swift in Sources */,
+				AE5051702450D47800D83DDD /* AvailabilityProtocol.swift in Sources */,
 				BA212DAD244B4376008AD849 /* SportViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
