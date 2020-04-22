@@ -44,7 +44,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QKx-xp-rtM">
-                                <rect key="frame" x="0.0" y="129.5" width="375" height="488.5"/>
+                                <rect key="frame" x="0.0" y="71.5" width="375" height="546.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LFm-yu-ADQ">
                                     <size key="itemSize" width="182" height="163"/>
@@ -95,8 +95,8 @@
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sports" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsg-RO-8OY">
-                                <rect key="frame" x="156" y="43" width="63" height="26.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <rect key="frame" x="150.5" y="24" width="74.5" height="31.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -104,11 +104,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="QKx-xp-rtM" firstAttribute="leading" secondItem="cS9-Zs-mSI" secondAttribute="leading" id="BCf-tR-Jic"/>
-                            <constraint firstItem="QKx-xp-rtM" firstAttribute="top" secondItem="gsg-RO-8OY" secondAttribute="bottom" constant="60" id="Dss-6L-6tC"/>
+                            <constraint firstItem="QKx-xp-rtM" firstAttribute="top" secondItem="gsg-RO-8OY" secondAttribute="bottom" constant="16" id="Dss-6L-6tC"/>
                             <constraint firstItem="cS9-Zs-mSI" firstAttribute="bottom" secondItem="QKx-xp-rtM" secondAttribute="bottom" id="YBx-y7-1bW"/>
                             <constraint firstItem="gsg-RO-8OY" firstAttribute="centerX" secondItem="NsK-yZ-bAi" secondAttribute="centerX" id="hg2-Fu-Oym"/>
                             <constraint firstItem="cS9-Zs-mSI" firstAttribute="trailing" secondItem="QKx-xp-rtM" secondAttribute="trailing" id="xze-ch-zRE"/>
-                            <constraint firstItem="gsg-RO-8OY" firstAttribute="top" secondItem="cS9-Zs-mSI" secondAttribute="top" constant="43" id="yCS-33-EUU"/>
+                            <constraint firstItem="gsg-RO-8OY" firstAttribute="top" secondItem="cS9-Zs-mSI" secondAttribute="top" constant="24" id="yCS-33-EUU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cS9-Zs-mSI"/>
                     </view>
@@ -240,6 +240,7 @@
                 <tabBarController storyboardIdentifier="tabBarController" automaticallyAdjustsScrollViewInsets="NO" id="NfH-dd-qAh" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Fs7-LO-FzN">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>

@@ -34,7 +34,7 @@
             <connections>
                 <outlet property="teamImageView" destination="Itq-e6-bd3" id="oMQ-LZ-Zq0"/>
             </connections>
-            <point key="canvasLocation" x="50.000000000000007" y="88.058035714285708"/>
+            <point key="canvasLocation" x="49.275362318840585" y="87.723214285714278"/>
         </collectionViewCell>
     </objects>
 </document>

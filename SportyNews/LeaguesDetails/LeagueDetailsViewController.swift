@@ -9,8 +9,9 @@
 import UIKit
 
 class LeagueDetailsViewController: UIViewController, UITableViewDelegate,UITableViewDataSource, UINavigationBarDelegate, LeaguesDetailsControllerContract {
-    func updateFavourite() {
-        favouriteButtonOutlet.isSelected = true 
+    
+    func updateFavourite(isSelected: Bool) {
+        favouriteButtonOutlet.isSelected = isSelected
     }
     
     let presenter = LeagueDetailsPresenter()
@@ -64,7 +65,12 @@ class LeagueDetailsViewController: UIViewController, UITableViewDelegate,UITable
     
     
     @IBAction func leagueFavouriteButtonAction(_ sender: UIButton) {
-        self.presenter.addLeagueToLogal(League: league!)
+        if(!favouriteButtonOutlet.isSelected){
+            self.presenter.addLeagueToLocal(League: league!)
+        }
+        else{
+            self.presenter.deleteFromLocal(League: league!)
+        }
     }
     
     
@@ -162,9 +168,10 @@ class LeagueDetailsViewController: UIViewController, UITableViewDelegate,UITable
         backbutton.setTitleColor(backbutton.tintColor, for: .normal)
         backbutton.addTarget(self, action: #selector(returnToLeagues), for: .touchUpInside)
         leagueNameLabel.text = league?.leagueName
-        //self.navigationBarItem.leftBarButtonItem = UIBarButtonItem(customView: backbutton)
         presenter.getAllNeededData(forLeague: league!)
         self.navigationBarItem.leftBarButtonItem = UIBarButtonItem(title: "<< Leagues", style: UIBarButtonItemStyle.done, target: self, action: #selector(returnToLeagues))
+        
+        self.checStarStatus()
     }
 
     @objc func returnToLeagues(){
@@ -175,7 +182,11 @@ class LeagueDetailsViewController: UIViewController, UITableViewDelegate,UITable
         // Dispose of any resources that can be recreated.
     }
     
-
+    func checStarStatus(){
+        if let id = self.league?.leagueID {
+            self.presenter.checkLeagueFavourite(withID: (self.league?.leagueID)!)
+        }
+    }
     
 
 }

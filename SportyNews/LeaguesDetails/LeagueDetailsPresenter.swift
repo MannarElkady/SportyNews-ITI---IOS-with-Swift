@@ -9,9 +9,25 @@
 import Foundation
 
 class LeagueDetailsPresenter : LeaguesDetailsPresenterContract{
-    func addLeagueToLogal(League league: LeagueEntity) {
-        CoreDataHandler.getCoreHandlerInstance().insertInLocalLeagues(league: league)
-        self.controller?.updateFavourite()
+    func deleteFromLocal(League league: LeagueEntity) {
+        if let id = league.leagueID {
+        CoreDataHandler.getCoreHandlerInstance().deleteFromEntity(id: id)
+            self.controller?.updateFavourite(isSelected: false)
+        }
+    }
+    
+    func checkLeagueFavourite(withID id : String) {
+        if let val = CoreDataHandler.getCoreHandlerInstance().fetchLeagueById(id: id){
+            self.controller?.updateFavourite(isSelected: true)
+        }
+        else{
+            self.controller?.updateFavourite(isSelected: false)
+        }
+    }
+    
+    func addLeagueToLocal(League league: LeagueEntity) {
+    CoreDataHandler.getCoreHandlerInstance().insertInLocalLeagues(league: league)
+        self.controller?.updateFavourite(isSelected: true)
         
     }
     
@@ -20,17 +36,7 @@ class LeagueDetailsPresenter : LeaguesDetailsPresenterContract{
         APIURLs.searchEventsKey = id
         NetworkService.INSTANCE.getResponse(withURL: URL(string: "\(APIURLs.latestPastEventsPerLeagueURLString)\(APIURLs.searchEventsKey!)")!, ProcessResult: {
             json in
-            //print(json)
             let upComingEvents = Mapper.jsonToEventList(fromJson: json)
-            /*upComingEvents.forEach({
-                event in
-                print(event.eventName!)
-                print(event.eventTime!)
-                print(event.eventDate!)
-                print(event.firstTeam?.teamName!)
-                print(event.secondTeam?.teamName!)
-                print(event.firstTeamScore!)
-            })*/
             self.controller?.displayUpcomingEvents(listOfUpcomingEvents: upComingEvents)
         }
             
@@ -47,7 +53,7 @@ class LeagueDetailsPresenter : LeaguesDetailsPresenterContract{
     }
     
     func getTeams(withName name: String) {
-        APIURLs.searchTeamKey = name.split(separator: " ").joined(separator: "%20")
+        APIURLs.searchTeamKey = name.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         NetworkService.INSTANCE.getResponse(withURL: URL(string: "\(APIURLs.allTeamsPerLeagueURLString)\(APIURLs.searchTeamKey!)")!, ProcessResult: {
             json in
                // print(json)

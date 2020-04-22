@@ -36,7 +36,9 @@ ControllerContract {
     override func viewDidLoad() {
         super.viewDidLoad()
         presenterLeague.controller = self
-        self.sportNameTextField?.text = sportName
+        if let name = sportName {
+            self.sportNameTextField?.text = sportName
+        } else { self.sportNameTextField?.text = "Favourite Sports"}
         
         
     }
