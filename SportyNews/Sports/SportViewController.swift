@@ -11,7 +11,7 @@ import Kingfisher
 
 //private let reuseIdentifier = "Cell"
 
-class SportViewController: UIViewController ,SportsViewProtocol,UICollectionViewDelegate,UICollectionViewDataSource{
+class SportViewController: UIViewController ,SportsViewProtocol,UICollectionViewDelegate,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     var sportsList:Array<SportEntity>?
     var sportPersenter:SportsPersenter?
     
@@ -21,9 +21,23 @@ class SportViewController: UIViewController ,SportsViewProtocol,UICollectionView
         sportsList = sports
         print((sportsList?.count)!)
         collectionView.reloadData()
-        
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets.zero
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let yourWidth = collectionView.bounds.width/2.0
+        let yourHeight = yourWidth
+    
+        return CGSize(width: yourWidth, height: yourHeight)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,12 +114,12 @@ class SportViewController: UIViewController ,SportsViewProtocol,UICollectionView
     }
 
    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    /*func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let height = view.frame.size.height
         let width = view.frame.size.width
         return CGSize(width: width * 0.5, height: height * 0.2)
-    }
+    }*/
     /*override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         <#code#>
     }*/
