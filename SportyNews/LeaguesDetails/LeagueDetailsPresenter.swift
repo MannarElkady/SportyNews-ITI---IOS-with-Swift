@@ -63,7 +63,6 @@ class LeagueDetailsPresenter : LeaguesDetailsPresenterContract , AvaialbilityPro
         APIURLs.searchTeamKey = name.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         NetworkService.INSTANCE.getResponse(withURL: URL(string: "\(APIURLs.allTeamsPerLeagueURLString)\(APIURLs.searchTeamKey!)")!, ProcessResult: {
             json in
-               // print(json)
             let teams = Mapper.jsonToTeamList(fromJson: json)
             self.controller?.displayTeams(listOfTeams: teams)
         })

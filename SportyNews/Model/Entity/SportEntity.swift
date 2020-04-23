@@ -9,7 +9,7 @@
 import Foundation
 
 class SportEntity{
-    init(sportName:String,sportThumb:String) {
+    /*init(sportName:String,sportThumb:String) {
         self.sportName = sportName
         self.sportThumb = sportThumb
     }
@@ -17,7 +17,7 @@ class SportEntity{
         sportThumb = ""
         
         sportName = ""
-    }
-    var sportName : String
-    var sportThumb : String
+    }*/
+    var sportName : String?
+    var sportThumb : String?
 }

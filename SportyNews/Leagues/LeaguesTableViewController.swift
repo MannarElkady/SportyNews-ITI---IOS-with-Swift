@@ -16,7 +16,7 @@ ControllerContract {
     
     @IBOutlet weak var sportNameTextField: UILabel!
     var sportName: String?
-    var isFavouriteTab = true
+    var isFavouriteTab : Bool?
     
     var leaguesArray: Array<LeagueEntity>?
     
@@ -39,7 +39,6 @@ ControllerContract {
         
     }
     override func viewWillAppear(_ animated: Bool) {
-        print("\n\n\n\n\n\n***")
         presenterLeague.getLeagues()
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -72,10 +71,9 @@ ControllerContract {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if(self.presenterLeague.checkAvailability()){
-        print("Select item: \((leaguesArray?[indexPath.row])?.leagueID) ")
         let leagueDetails = self.storyboard?.instantiateViewController(withIdentifier: "leagueDetailsViewController") as! LeagueDetailsViewController
-        leagueDetails.league = leaguesArray?[indexPath.row]
-        self.present(leagueDetails, animated: true, completion: nil)
+            leagueDetails.league = leaguesArray?[indexPath.row]
+            self.present(leagueDetails, animated: true, completion: nil)
         }
         else{
             showAlert(Message: "Internet is NOT Available", Details: "Please Connect To Internet to Continue")

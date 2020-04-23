@@ -44,13 +44,6 @@ class SportViewController: UIViewController ,SportsViewProtocol,UICollectionView
         sportsList = Array<SportEntity>()
         sportPersenter = SportsPersenter(sportsview: self)
         sportPersenter?.getSports()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-
-
-        // Do any additional setup after loading the view.
     }
     
 
@@ -94,16 +87,13 @@ class SportViewController: UIViewController ,SportsViewProtocol,UICollectionView
 
      func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
          let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SportsCollectionViewCell
-        if(((sportsList?.count)!)==0||(sportsList?.count)!==nil){
+        if(((sportsList?.count)!)==0||(sportsList?.count)! == nil){
             
         }
-        else
-        {
+        else{
             cell.sportName.text = sportsList?[indexPath.row].sportName
-        
             let imageUrl = URL(string: (sportsList?[indexPath.row].sportThumb)!)
             cell.sportImage.kf.setImage(with: imageUrl)
-
         }
         
 
@@ -135,7 +125,6 @@ class SportViewController: UIViewController ,SportsViewProtocol,UICollectionView
      //Uncomment this method to specify if the specified item should be selected
   
     func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        print("\(sportsList![indexPath.row].sportName)")
         let leagueStoryBoard = UIStoryboard(name: "LeaguesStoryboard", bundle: nil)
         let leagueViewController = leagueStoryBoard.instantiateViewController(withIdentifier:
             "leaguesTableViewController") as! LeaguesTableViewController
@@ -145,22 +134,4 @@ class SportViewController: UIViewController ,SportsViewProtocol,UICollectionView
         self.navigationController?.pushViewController(leagueViewController, animated: true)
         return true
     }
-  
- 
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
-
 }

@@ -14,23 +14,22 @@ class LeaguePresenter : PresenterContract, AvaialbilityProtocol{
     }
     
     func getLeagues() {
-        if(checkAvailability()){
-            if((!(self.controller as! LeaguesTableViewController).isFavouriteTab)){
-                getLeagueFromNetwork()
-                (self.controller as! LeaguesTableViewController).isFavouriteTab = true
+        if((!((self.controller as! LeaguesTableViewController).isFavouriteTab ?? true))){
+            if(checkAvailability()){
+                    getLeagueFromNetwork()
             }
-            else {
+            else{
+                (self.controller as! LeaguesTableViewController).showAlert(Message: "Internet is NOT Available", Details: "Please Connect To Internet to Continue")
+            }
+        }else {
                 getFavouriteLeagues()
-                
-            }
         }
     }
     
     var controller : ControllerContract?
     
     func getLeagueFromNetwork() {
-        APIURLs.searchLeagueKey = self.controller?.sportName?.split(separator: " ").joined(separator: "%20")
-        //print(name.split(separator: " ").joined(separator: "%20"))
+        APIURLs.searchLeagueKey = self.controller?.sportName?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
         NetworkService.INSTANCE.getResponse(withURL:URL(string: "\(APIURLs.allLeaguesForSportURLString)\(APIURLs.searchLeagueKey!)")!, ProcessResult: {
             json in
             

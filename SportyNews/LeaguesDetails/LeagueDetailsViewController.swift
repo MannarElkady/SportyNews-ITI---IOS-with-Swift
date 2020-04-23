@@ -14,17 +14,17 @@ class LeagueDetailsViewController: UIViewController, UITableViewDelegate,UITable
         favouriteButtonOutlet.isSelected = isSelected
     }
     
-    let presenter = LeagueDetailsPresenter()
+    private let presenter = LeagueDetailsPresenter()
     
-    @IBOutlet weak var favouriteButtonOutlet: UIButton!
-    @IBOutlet weak var leagueNameLabel: UILabel!
+    @IBOutlet weak private var favouriteButtonOutlet: UIButton!
+    @IBOutlet weak private var leagueNameLabel: UILabel!
     
-    @IBOutlet weak var navigationbar: UINavigationBar!
+    @IBOutlet weak private var navigationbar: UINavigationBar!
     
-    @IBOutlet weak var navigationBarItem: UINavigationItem!
+    @IBOutlet weak private var navigationBarItem: UINavigationItem!
     var league : LeagueEntity?
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak private var tableView: UITableView!
     
     func displayUpcomingEvents(listOfUpcomingEvents events: Array<EventEntity>) {
 
@@ -54,15 +54,7 @@ class LeagueDetailsViewController: UIViewController, UITableViewDelegate,UITable
         }else {
             return
         }
-            //indexes.contains {$0.section == 2 && $0.row == 0 }
-        /*if (teams.count != 0) {
-            (self.tableView?.cellForRow(at: IndexPath(row: 0, section: 2)) as! TeamsTableViewCell).teamsArray = teams
-            (self.tableView?.cellForRow(at: IndexPath(row: 0, section: 2)) as! TeamsTableViewCell).teamsCollectionView.reloadData()
-        }*/
     }
-    
-    
-    
     
     @IBAction func leagueFavouriteButtonAction(_ sender: UIButton) {
         if(!favouriteButtonOutlet.isSelected){
@@ -134,12 +126,12 @@ class LeagueDetailsViewController: UIViewController, UITableViewDelegate,UITable
 
     @objc func toTeamDetailsPage(notification: Notification){
         if let teamsObject = notification.object as? TeamEntity{
-            print("heree")
-            /*self.navigationController?.pushViewController(teamViewController, animated: true)*/
-            print("heree")
+            
             let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
              let teamViewController = mainStoryBoard.instantiateViewController(withIdentifier: "teamDetailsViewController") as! TeamDetailsViewController
              teamViewController.teamDetails = teamsObject
+            //self.navigationController = (self.storyboard?.instantiateViewController(withIdentifier: "navLeagues") as! UINavigationController) self.navigationController?.pushViewController(teamViewController, animated: true)
+            //print(self.navigationController)
              self.present(teamViewController, animated: true, completion: nil)
         }
         else {return}
@@ -148,8 +140,6 @@ class LeagueDetailsViewController: UIViewController, UITableViewDelegate,UITable
         
         if(indexPath.row == 0 && indexPath.section==2){
             print("Inside will display for row 2")
-           // (cell as! TeamsTableViewCell).teamsArray = teamsList
-           // print("\(teamsList) \((cell as! TeamsTableViewCell).teamsArray)")
              (cell as! TeamsTableViewCell).teamsCollectionView.reloadData()
         }
     }

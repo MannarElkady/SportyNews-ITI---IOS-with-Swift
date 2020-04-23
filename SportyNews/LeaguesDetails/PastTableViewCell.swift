@@ -70,9 +70,6 @@ class PastTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
             return 1
         }
         
-       /* func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            return CGSize(width: 254, height: 180)
-        }*/
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell : LatestCollectionCell = pastCollectionView.dequeueReusableCell(withReuseIdentifier: "latestCollectionCell", for: indexPath) as! LatestCollectionCell
         cell.firstTeamImageView.image = UIImage(named: "trophy")
@@ -82,7 +79,6 @@ class PastTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
         cell.firstTeamLabelName.text = pastEvents[indexPath.row].firstTeam?.teamName
         cell.secondTeamNameLabel.text = pastEvents[indexPath.row].secondTeam?.teamName
         cell.dateTimeLabel.text = "Date: \(String(describing: (pastEvents[indexPath.row].eventDate)!)) Time: \(String(describing: (pastEvents[indexPath.row].eventTime)!))"
-        //cell.firstTeamImageView.kf.setImage(with: URL(string: pastEvents[indexPath.row]))
         return cell
         }
 

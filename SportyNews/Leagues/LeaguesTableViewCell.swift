@@ -32,14 +32,6 @@ class LeaguesTableViewCell: UITableViewCell {
     }
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-/*
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        print("Tabbed row with league name:\((league?.leagueName!)) ")
-        // Configure the view for the selected state
-        
-    }*/
 
 }

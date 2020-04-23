@@ -26,15 +26,11 @@ class Mapper{
     
     public static func jsonToLeagueList(fromJson jsonArray: [JSON]) -> Array<LeagueEntity>{
         var leagueArray = Array<LeagueEntity>()
-        //let customarray = json["countrys"].arrayValue
         jsonArray.forEach({ json in
             let league = LeagueEntity()
             league.leagueBadge = json["strBadge"].stringValue
-           // print(league.leagueBadge)
             league.leagueName = json["strLeague"].stringValue
-         //   print(league.leagueName)
             league.leagueVideoLink = json["strYoutube"].stringValue
-         //   print(league.leagueVideoLink)
             leagueArray.append(league)
         })
         return leagueArray

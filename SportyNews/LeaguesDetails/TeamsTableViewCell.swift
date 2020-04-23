@@ -35,16 +35,11 @@ class TeamsTableViewCell: UITableViewCell ,UICollectionViewDelegate, UICollectio
       //  return 0
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       // let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
-       // let teamViewController = mainStoryBoard.instantiateViewController(withIdentifier: "teamDetailsViewController") as! TeamDetailsViewController
-        //teamViewController.teamDetails = teamsArray[indexPath.row]
-       // self.present(teamViewController, animated: true, completion: nil)
-        
         //Using Notification Center to send data
         let nc = NotificationCenter.default
         nc.post(name: Notification.Name(rawValue: "callTeamDetails"), object: teamsArray[indexPath.row], userInfo: nil)
-        
     }
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
             return 1
     }

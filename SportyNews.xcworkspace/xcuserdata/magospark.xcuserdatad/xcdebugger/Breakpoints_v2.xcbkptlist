@@ -7,54 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3C1E5A2D-D4E3-4C75-9172-7DAFFC8B4568"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SportyNews/Model/Entity/SportEntity.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "init()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "3C1E5A2D-D4E3-4C75-9172-7DAFFC8B4568 - ab739040693a3a33"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SportyNews.SportEntity.__allocating_init() -&gt; SportyNews.SportEntity"
-                  moduleName = "SportyNews"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/magospark/Desktop/ProjectSwift/SportyApp/SportyNews/Model/Entity/SportEntity.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "14">
-               </Location>
-               <Location
-                  uuid = "3C1E5A2D-D4E3-4C75-9172-7DAFFC8B4568 - a33d8a3d3d60f3eb"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SportyNews.SportEntity.init() -&gt; SportyNews.SportEntity"
-                  moduleName = "SportyNews"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/magospark/Desktop/ProjectSwift/SportyApp/SportyNews/Model/Entity/SportEntity.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "25">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "6853C478-51DA-4683-8C16-08453C031223"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -471,22 +423,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "8A02F9EC-9E07-464B-AFC3-8F02987A4647"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SportyNews/Sports/SportViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "132"
-            endingLineNumber = "132"
-            landmarkName = "SportViewController"
-            landmarkType = "3">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "131BECB1-BF63-4EFC-996F-4D1DF1160327"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -494,10 +430,10 @@
             filePath = "SportyNews/Sports/SportViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
-            landmarkName = "SportViewController"
-            landmarkType = "3">
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "collectionView(_:shouldSelectItemAt:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -548,34 +484,34 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "BF79A47B-0BB0-4624-A0A9-2D87135B0066 - a00034dcb272b7bb"
+                  uuid = "BF79A47B-0BB0-4624-A0A9-2D87135B0066 - 2e2ad0effb0c4b85"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "SportyNews.LeaguesTableViewCell.youtubeButtonAction(__C.UIButton) -&gt; ()"
                   moduleName = "SportyNews"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/magospark/Desktop/Sports/SportyApp/SportyNews/Leagues/LeaguesTableViewCell.swift"
+                  urlString = "file:///Users/magospark/Desktop/SportyNewsManar/SportyApp/SportyNews/Leagues/LeaguesTableViewCell.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "21"
                   endingLineNumber = "21"
-                  offsetFromSymbolStart = "1834">
+                  offsetFromSymbolStart = "1641">
                </Location>
                <Location
-                  uuid = "BF79A47B-0BB0-4624-A0A9-2D87135B0066 - a00034dcb272b7bb"
+                  uuid = "BF79A47B-0BB0-4624-A0A9-2D87135B0066 - 2e2ad0effb0c4b85"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "SportyNews.LeaguesTableViewCell.youtubeButtonAction(__C.UIButton) -&gt; ()"
                   moduleName = "SportyNews"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/magospark/Desktop/Sports/SportyApp/SportyNews/Leagues/LeaguesTableViewCell.swift"
+                  urlString = "file:///Users/magospark/Desktop/SportyNewsManar/SportyApp/SportyNews/Leagues/LeaguesTableViewCell.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "21"
                   endingLineNumber = "21"
-                  offsetFromSymbolStart = "5090">
+                  offsetFromSymbolStart = "3869">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -890,8 +826,8 @@
             filePath = "SportyNews/LeaguesDetails/LeagueDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "LeagueDetailsViewController"
             landmarkType = "3">
             <Locations>
@@ -1104,7 +1040,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "72D8404D-56B4-438E-BE9B-DD9C537E545A"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SportyNews/LeaguesDetails/LeagueDetailsPresenter.swift"
@@ -1114,38 +1050,6 @@
             endingLineNumber = "57"
             landmarkName = "getPastEvents(withID:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "72D8404D-56B4-438E-BE9B-DD9C537E545A - c8cf54ab5118d9f0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SportyNews.LeagueDetailsPresenter.getTeams(withName: Swift.String) -&gt; ()"
-                  moduleName = "SportyNews"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/magospark/Desktop/Sports/SportyApp/SportyNews/LeaguesDetails/LeagueDetailsPresenter.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "51"
-                  endingLineNumber = "51"
-                  offsetFromSymbolStart = "1948">
-               </Location>
-               <Location
-                  uuid = "72D8404D-56B4-438E-BE9B-DD9C537E545A - c8faee1424301df0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (SwiftyJSON.JSON) -&gt; () in SportyNews.LeagueDetailsPresenter.getTeams(withName: Swift.String) -&gt; ()"
-                  moduleName = "SportyNews"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/magospark/Desktop/Sports/SportyApp/SportyNews/LeaguesDetails/LeagueDetailsPresenter.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "54"
-                  endingLineNumber = "54"
-                  offsetFromSymbolStart = "50">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1279,22 +1183,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A75EB413-F0DE-4A9B-969F-B59C16C0463D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SportyNews/LeaguesDetails/LeagueDetailsViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "153"
-            endingLineNumber = "153"
-            landmarkName = "tableView(_:willDisplay:forRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "1451FBBB-1CA2-494D-909F-07755ED6D707"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -1302,9 +1190,9 @@
             filePath = "SportyNews/LeaguesDetails/LeagueDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
-            landmarkName = "tableView(_:willDisplay:forRowAt:)"
+            startingLineNumber = "148"
+            endingLineNumber = "148"
+            landmarkName = "position(for:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -1334,8 +1222,8 @@
             filePath = "SportyNews/LeaguesDetails/LeagueDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "126"
-            endingLineNumber = "126"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1382,8 +1270,8 @@
             filePath = "SportyNews/LeaguesDetails/LeagueDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
             landmarkName = "toTeamDetailsPage(notification:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1424,7 +1312,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6DDDF425-B85D-44FA-A603-0061DB87A83F"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SportyNews/Leagues/LeaguesPersenter.swift"
@@ -1440,14 +1328,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "1B807A75-D5F6-438F-9618-84A0B854B726"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SportyNews/Leagues/LeaguesPersenter.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
             landmarkName = "getLeagues()"
             landmarkType = "7">
          </BreakpointContent>
@@ -1510,10 +1398,10 @@
             filePath = "SportyNews/Sports/SportViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "140"
-            endingLineNumber = "140"
-            landmarkName = "collectionView(_:shouldSelectItemAt:)"
-            landmarkType = "7">
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "SportViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1536,55 +1424,23 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "34C1B0E5-6EA1-4DE1-98B5-F282254875CB"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SportyNews/LeaguesDetails/LeagueDetailsViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "187"
-            endingLineNumber = "187"
-            landmarkName = "checStarStatus()"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "34C1B0E5-6EA1-4DE1-98B5-F282254875CB - 8e24d88bb6d8aaed"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SportyNews.LeagueDetailsViewController.checStarStatus() -&gt; ()"
-                  moduleName = "SportyNews"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/magospark/Desktop/Sports/SportyApp/SportyNews/LeaguesDetails/LeagueDetailsViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "181"
-                  endingLineNumber = "181"
-                  offsetFromSymbolStart = "304">
-               </Location>
-               <Location
-                  uuid = "34C1B0E5-6EA1-4DE1-98B5-F282254875CB - 8e24d88bb6d8aaed"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SportyNews.LeagueDetailsViewController.checStarStatus() -&gt; ()"
-                  moduleName = "SportyNews"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/magospark/Desktop/Sports/SportyApp/SportyNews/LeaguesDetails/LeagueDetailsViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "181"
-                  endingLineNumber = "181"
-                  offsetFromSymbolStart = "769">
-               </Location>
-            </Locations>
+            startingLineNumber = "181"
+            endingLineNumber = "181"
+            landmarkName = "LeagueDetailsViewController"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A9633271-1D51-4879-A193-BAB1737C2195"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SportyNews/LeaguesDetails/LeagueDetailsPresenter.swift"
@@ -1593,6 +1449,654 @@
             startingLineNumber = "56"
             endingLineNumber = "56"
             landmarkName = "getPastEvents(withID:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "73826CA5-1835-47CE-A550-93303B21D492"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SportyNews/LeaguesDetails/LeagueDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
+            landmarkName = "didReceiveMemoryWarning()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "81723248-A3B9-4C13-88EB-8E9F8DF382B3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SportyNews/Leagues/LeaguesTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "722D85CA-3C96-41A3-B48F-872E9414BEFE"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SportyNews/Sports/SportViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "138"
+            endingLineNumber = "138">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AE53FBE5-F79C-48B9-9BEA-975EBE4A9087"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SportyNews/Sports/SportViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "138"
+            endingLineNumber = "138">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9FD083CE-6334-43B0-A8E9-C993E71E0603"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SportyNews/LeaguesDetails/LeagueDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "LeagueDetailsViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "9FD083CE-6334-43B0-A8E9-C993E71E0603 - f8b18b872e986283"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SportyNews.LeagueDetailsViewController.isFromFavouriteTab.getter : Swift.Optional&lt;Swift.Bool&gt;"
+                  moduleName = "SportyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magospark/Desktop/SportyNewsManar/SportyApp/SportyNews/LeaguesDetails/LeagueDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "107">
+               </Location>
+               <Location
+                  uuid = "9FD083CE-6334-43B0-A8E9-C993E71E0603 - dd4c7de900c6ca8f"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SportyNews.LeagueDetailsViewController.isFromFavouriteTab.setter : Swift.Optional&lt;Swift.Bool&gt;"
+                  moduleName = "SportyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magospark/Desktop/SportyNewsManar/SportyApp/SportyNews/LeaguesDetails/LeagueDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  uuid = "9FD083CE-6334-43B0-A8E9-C993E71E0603 - 665595058230349e"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SportyNews.LeagueDetailsViewController.isFromFavouriteTab.modify : Swift.Optional&lt;Swift.Bool&gt;"
+                  moduleName = "SportyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magospark/Desktop/SportyNewsManar/SportyApp/SportyNews/LeaguesDetails/LeagueDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "9FD083CE-6334-43B0-A8E9-C993E71E0603 - 9a01fa2489ad78f1"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SportyNews.LeagueDetailsViewController.isFromFavouriteTab.modify : Swift.Optional&lt;Swift.Bool&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "SportyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magospark/Desktop/SportyNewsManar/SportyApp/SportyNews/LeaguesDetails/LeagueDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "9FD083CE-6334-43B0-A8E9-C993E71E0603 - 6f08cdf751a09242"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SportyNews.LeagueDetailsViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; SportyNews.LeagueDetailsViewController"
+                  moduleName = "SportyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magospark/Desktop/SportyNewsManar/SportyApp/SportyNews/LeaguesDetails/LeagueDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "231">
+               </Location>
+               <Location
+                  uuid = "9FD083CE-6334-43B0-A8E9-C993E71E0603 - c7baeb20de263365"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SportyNews.LeagueDetailsViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;SportyNews.LeagueDetailsViewController&gt;"
+                  moduleName = "SportyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magospark/Desktop/SportyNewsManar/SportyApp/SportyNews/LeaguesDetails/LeagueDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "168">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "37ED3EE3-4EA0-47AB-AA19-2B016898DA2A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SportyNews/LeaguesDetails/LeagueDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "LeagueDetailsViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "37ED3EE3-4EA0-47AB-AA19-2B016898DA2A - 1c285458b3d5d1ee"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SportyNews.LeagueDetailsViewController.navigationbar.getter : Swift.Optional&lt;__C.UINavigationBar&gt;"
+                  moduleName = "SportyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magospark/Desktop/SportyNewsManar/SportyApp/SportyNews/LeaguesDetails/LeagueDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "37ED3EE3-4EA0-47AB-AA19-2B016898DA2A - 6cc9174fcacfe9b2"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SportyNews.LeagueDetailsViewController.navigationbar.setter : Swift.Optional&lt;__C.UINavigationBar&gt;"
+                  moduleName = "SportyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magospark/Desktop/SportyNewsManar/SportyApp/SportyNews/LeaguesDetails/LeagueDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "37ED3EE3-4EA0-47AB-AA19-2B016898DA2A - 782c01d6b6909fe7"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SportyNews.LeagueDetailsViewController.navigationbar.modify : Swift.Optional&lt;__C.UINavigationBar&gt;"
+                  moduleName = "SportyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magospark/Desktop/SportyNewsManar/SportyApp/SportyNews/LeaguesDetails/LeagueDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "67">
+               </Location>
+               <Location
+                  uuid = "37ED3EE3-4EA0-47AB-AA19-2B016898DA2A - 790834b642ffb04d"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SportyNews.LeagueDetailsViewController.navigationbar.modify : Swift.Optional&lt;__C.UINavigationBar&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "SportyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magospark/Desktop/SportyNewsManar/SportyApp/SportyNews/LeaguesDetails/LeagueDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "76">
+               </Location>
+               <Location
+                  uuid = "37ED3EE3-4EA0-47AB-AA19-2B016898DA2A - 6f08cdf751a09242"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SportyNews.LeagueDetailsViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; SportyNews.LeagueDetailsViewController"
+                  moduleName = "SportyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magospark/Desktop/SportyNewsManar/SportyApp/SportyNews/LeaguesDetails/LeagueDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "493">
+               </Location>
+               <Location
+                  uuid = "37ED3EE3-4EA0-47AB-AA19-2B016898DA2A - c7baeb20de263365"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SportyNews.LeagueDetailsViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;SportyNews.LeagueDetailsViewController&gt;"
+                  moduleName = "SportyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magospark/Desktop/SportyNewsManar/SportyApp/SportyNews/LeaguesDetails/LeagueDetailsViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "430">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7AFD981B-98F1-4B5D-A37C-168A1A8FF745"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SportyNews/Leagues/LeaguesTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "LeaguesTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "7AFD981B-98F1-4B5D-A37C-168A1A8FF745 - 3a3a30cd325c90cb"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SportyNews.LeaguesTableViewController.isFavouriteTab.getter : Swift.Optional&lt;Swift.Bool&gt;"
+                  moduleName = "SportyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magospark/Desktop/SportyNewsManar/SportyApp/SportyNews/Leagues/LeaguesTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "107">
+               </Location>
+               <Location
+                  uuid = "7AFD981B-98F1-4B5D-A37C-168A1A8FF745 - 970764fc982a78df"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SportyNews.LeaguesTableViewController.isFavouriteTab.setter : Swift.Optional&lt;Swift.Bool&gt;"
+                  moduleName = "SportyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magospark/Desktop/SportyNewsManar/SportyApp/SportyNews/Leagues/LeaguesTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  uuid = "7AFD981B-98F1-4B5D-A37C-168A1A8FF745 - 6aaab4c52bf44ace"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SportyNews.LeaguesTableViewController.isFavouriteTab.modify : Swift.Optional&lt;Swift.Bool&gt;"
+                  moduleName = "SportyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magospark/Desktop/SportyNewsManar/SportyApp/SportyNews/Leagues/LeaguesTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "7AFD981B-98F1-4B5D-A37C-168A1A8FF745 - c92495d108afa814"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SportyNews.LeaguesTableViewController.isFavouriteTab.modify : Swift.Optional&lt;Swift.Bool&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "SportyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magospark/Desktop/SportyNewsManar/SportyApp/SportyNews/Leagues/LeaguesTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "7AFD981B-98F1-4B5D-A37C-168A1A8FF745 - c520823d4534c387"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SportyNews.LeaguesTableViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; SportyNews.LeaguesTableViewController"
+                  moduleName = "SportyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magospark/Desktop/SportyNewsManar/SportyApp/SportyNews/Leagues/LeaguesTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "462">
+               </Location>
+               <Location
+                  uuid = "7AFD981B-98F1-4B5D-A37C-168A1A8FF745 - 2cf64f0feaef71d9"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SportyNews.LeaguesTableViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;SportyNews.LeaguesTableViewController&gt;"
+                  moduleName = "SportyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magospark/Desktop/SportyNewsManar/SportyApp/SportyNews/Leagues/LeaguesTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "400">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F7989998-0D72-4E66-B3D7-E9E04CA7EDC0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SportyNews/Sports/SportViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "collectionView(_:shouldSelectItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C6C65312-F293-41F2-9E54-A53A56DC3BE1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SportyNews/Leagues/LeaguesTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "LeaguesTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "C6C65312-F293-41F2-9E54-A53A56DC3BE1 - b1a0f341db6d9000"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SportyNews.LeaguesTableViewController.leaguesArray.getter : Swift.Optional&lt;Swift.Array&lt;SportyNews.LeagueEntity&gt;&gt;"
+                  moduleName = "SportyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magospark/Desktop/SportyNewsManar/SportyApp/SportyNews/Leagues/LeaguesTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "122">
+               </Location>
+               <Location
+                  uuid = "C6C65312-F293-41F2-9E54-A53A56DC3BE1 - b5863f1f39220014"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SportyNews.LeaguesTableViewController.leaguesArray.setter : Swift.Optional&lt;Swift.Array&lt;SportyNews.LeagueEntity&gt;&gt;"
+                  moduleName = "SportyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magospark/Desktop/SportyNewsManar/SportyApp/SportyNews/Leagues/LeaguesTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "C6C65312-F293-41F2-9E54-A53A56DC3BE1 - 235f61c1bdab1c03"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SportyNews.LeaguesTableViewController.leaguesArray.modify : Swift.Optional&lt;Swift.Array&lt;SportyNews.LeagueEntity&gt;&gt;"
+                  moduleName = "SportyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magospark/Desktop/SportyNewsManar/SportyApp/SportyNews/Leagues/LeaguesTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "C6C65312-F293-41F2-9E54-A53A56DC3BE1 - d39f221cb3d52a24"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SportyNews.LeaguesTableViewController.leaguesArray.modify : Swift.Optional&lt;Swift.Array&lt;SportyNews.LeagueEntity&gt;&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "SportyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magospark/Desktop/SportyNewsManar/SportyApp/SportyNews/Leagues/LeaguesTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "C6C65312-F293-41F2-9E54-A53A56DC3BE1 - c520823d4534c387"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SportyNews.LeaguesTableViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; SportyNews.LeaguesTableViewController"
+                  moduleName = "SportyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magospark/Desktop/SportyNewsManar/SportyApp/SportyNews/Leagues/LeaguesTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "542">
+               </Location>
+               <Location
+                  uuid = "C6C65312-F293-41F2-9E54-A53A56DC3BE1 - 2cf64f0feaef71d9"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SportyNews.LeaguesTableViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;SportyNews.LeaguesTableViewController&gt;"
+                  moduleName = "SportyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magospark/Desktop/SportyNewsManar/SportyApp/SportyNews/Leagues/LeaguesTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "474">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "47EDBAA3-1143-45E2-A629-333F5BD12BEF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SportyNews/Leagues/LeaguesTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "LeaguesTableViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "47EDBAA3-1143-45E2-A629-333F5BD12BEF - a720b7064c1e2232"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SportyNews.LeaguesTableViewController.presenterLeague.getter : SportyNews.LeaguePresenter"
+                  moduleName = "SportyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magospark/Desktop/SportyNewsManar/SportyApp/SportyNews/Leagues/LeaguesTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "122">
+               </Location>
+               <Location
+                  uuid = "47EDBAA3-1143-45E2-A629-333F5BD12BEF - a48bacc9beed8a06"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SportyNews.LeaguesTableViewController.presenterLeague.setter : SportyNews.LeaguePresenter"
+                  moduleName = "SportyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magospark/Desktop/SportyNewsManar/SportyApp/SportyNews/Leagues/LeaguesTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "47EDBAA3-1143-45E2-A629-333F5BD12BEF - 79ee629042b79435"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SportyNews.LeaguesTableViewController.presenterLeague.modify : SportyNews.LeaguePresenter"
+                  moduleName = "SportyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magospark/Desktop/SportyNewsManar/SportyApp/SportyNews/Leagues/LeaguesTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "47EDBAA3-1143-45E2-A629-333F5BD12BEF - 291cee9775e73363"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SportyNews.LeaguesTableViewController.presenterLeague.modify : SportyNews.LeaguePresenter with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "SportyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magospark/Desktop/SportyNewsManar/SportyApp/SportyNews/Leagues/LeaguesTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "47EDBAA3-1143-45E2-A629-333F5BD12BEF - c520823d4534c387"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SportyNews.LeaguesTableViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; SportyNews.LeaguesTableViewController"
+                  moduleName = "SportyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magospark/Desktop/SportyNewsManar/SportyApp/SportyNews/Leagues/LeaguesTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "626">
+               </Location>
+               <Location
+                  uuid = "47EDBAA3-1143-45E2-A629-333F5BD12BEF - 2cf64f0feaef71d9"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SportyNews.LeaguesTableViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;SportyNews.LeaguesTableViewController&gt;"
+                  moduleName = "SportyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/magospark/Desktop/SportyNewsManar/SportyApp/SportyNews/Leagues/LeaguesTableViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "558">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2E89D5E1-B1A7-4304-93C2-44ADD0CD3E20"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SportyNews/Leagues/LeaguesTableViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "viewWillAppear(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AF7A4110-8CBC-43D6-9725-6653B70F7AD8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SportyNews/AppDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "application(_:didFinishLaunchingWithOptions:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

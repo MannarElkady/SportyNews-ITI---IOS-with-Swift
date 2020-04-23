@@ -33,11 +33,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         leaguesViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
         leaguesViewController.title = "Favourite Leagues"
+        leaguesViewController.isFavouriteTab = true
         arr.append(leaguesViewController)
+        leaguesViewController.tabBarItem.badgeColor = UIColor.green
         
-    
+        //tabBar.tintColor = UIColor.white
+        //tabBar.barTintColor = UIColor.black
         
-       // tabBarController.addChildViewController(leaguesViewController)
         tabBarController?.setViewControllers(arr, animated: true)
         
         //setting Tab bar controller
