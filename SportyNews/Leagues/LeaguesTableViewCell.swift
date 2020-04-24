@@ -28,10 +28,13 @@ class LeaguesTableViewCell: UITableViewCell {
                 application.open(webURL)
             }
         }
+        else{
+            NotificationCenter.default.post(name: NSNotification.Name("displayNoLink"), object: league)
+        }
         
     }
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
+    
 }

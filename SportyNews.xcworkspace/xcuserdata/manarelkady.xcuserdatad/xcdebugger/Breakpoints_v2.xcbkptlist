@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "06CDCA84-7E29-422E-A4C9-E21A0A3DB569"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AB2D71A0-F55F-40CF-95A4-42707B28D58E"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SportyNews/LeaguesDetails/LeagueDetailsViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "LeagueDetailsViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D9CA72BE-AD59-4D0B-A343-6F0FFFFC71AB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SportyNews/Leagues/LeaguesTableViewCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "D9CA72BE-AD59-4D0B-A343-6F0FFFFC71AB - 82da2f33b5e54ab6"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SportyNews.LeaguesTableViewCell.youtubeButtonAction(__C.UIButton) -&gt; ()"
+                  moduleName = "SportyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/manarelkady/Desktop/SportyApp/SportyNews/Leagues/LeaguesTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "704">
+               </Location>
+               <Location
+                  uuid = "D9CA72BE-AD59-4D0B-A343-6F0FFFFC71AB - 82da2f33b5e54ab6"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SportyNews.LeaguesTableViewCell.youtubeButtonAction(__C.UIButton) -&gt; ()"
+                  moduleName = "SportyNews"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/manarelkady/Desktop/SportyApp/SportyNews/Leagues/LeaguesTableViewCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "4133">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
